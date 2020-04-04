@@ -1,0 +1,6 @@
+framework module FMPFeedbackForm {
+    umbrella header "FMPFeedbackForm.h"
+    
+    export *
+    module * { export * }
+}

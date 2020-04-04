@@ -1,0 +1,826 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F04460524352939003DFCEF /* FMPClipView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F04460324352939003DFCEF /* FMPClipView.h */; };
+		2F04460624352939003DFCEF /* FMPClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F04460424352939003DFCEF /* FMPClipView.m */; };
+		2F3E948C242CE52D00BF20C4 /* FMPTextFieldWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F3E948A242CE52D00BF20C4 /* FMPTextFieldWrapper.h */; };
+		2F3E948D242CE52D00BF20C4 /* FMPTextFieldWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E948B242CE52D00BF20C4 /* FMPTextFieldWrapper.m */; };
+		2F926E3623F24561007B41C0 /* FMPBorderedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F926E3423F24561007B41C0 /* FMPBorderedView.h */; };
+		2F926E3723F24561007B41C0 /* FMPBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F926E3523F24561007B41C0 /* FMPBorderedView.m */; };
+		2F926E3E23F249F0007B41C0 /* FMPClickableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F926E3C23F249F0007B41C0 /* FMPClickableView.h */; };
+		2F926E3F23F249F0007B41C0 /* FMPClickableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F926E3D23F249F0007B41C0 /* FMPClickableView.m */; };
+		2F926E4223F25D04007B41C0 /* FMPLeftFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F926E4023F25D04007B41C0 /* FMPLeftFlowLayout.h */; };
+		2F926E4323F25D04007B41C0 /* FMPLeftFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F926E4123F25D04007B41C0 /* FMPLeftFlowLayout.m */; };
+		2F926E4623F43259007B41C0 /* FMPAttachmentsCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F926E4423F43259007B41C0 /* FMPAttachmentsCollectionView.h */; };
+		2F926E4723F43259007B41C0 /* FMPAttachmentsCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F926E4523F43259007B41C0 /* FMPAttachmentsCollectionView.m */; };
+		2F926E4A23F43F1D007B41C0 /* FMPDefaultFileSelectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F926E4823F43F1D007B41C0 /* FMPDefaultFileSelectionManager.h */; };
+		2F926E4B23F43F1D007B41C0 /* FMPDefaultFileSelectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F926E4923F43F1D007B41C0 /* FMPDefaultFileSelectionManager.m */; };
+		2F95D72F24118C0E007FD4EF /* FMPSystemInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F95D72D24118C0E007FD4EF /* FMPSystemInfo.h */; };
+		2F95D73024118C0E007FD4EF /* FMPSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F95D72E24118C0E007FD4EF /* FMPSystemInfo.m */; };
+		2F95D75D2418E974007FD4EF /* FMPSystemProfileProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F95D75C2418E974007FD4EF /* FMPSystemProfileProvider.h */; };
+		2FA47A7E23F1D078005E4467 /* FMPAttachButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FA47A7C23F1D078005E4467 /* FMPAttachButtonItem.h */; };
+		2FA47A7F23F1D078005E4467 /* FMPAttachButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA47A7D23F1D078005E4467 /* FMPAttachButtonItem.m */; };
+		2FA47A8223F1EBE5005E4467 /* FMPMaskedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FA47A8023F1EBE5005E4467 /* FMPMaskedImageView.h */; };
+		2FA47A8323F1EBE5005E4467 /* FMPMaskedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA47A8123F1EBE5005E4467 /* FMPMaskedImageView.m */; };
+		2FA47A8A23F22C40005E4467 /* FMPAttachmentItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FA47A8823F22C40005E4467 /* FMPAttachmentItem.h */; };
+		2FA47A8B23F22C40005E4467 /* FMPAttachmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA47A8923F22C40005E4467 /* FMPAttachmentItem.m */; };
+		2FAA0E50240ADAC200D3851B /* FMPFileSelectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FAA0E4F240ADAC200D3851B /* FMPFileSelectionManager.h */; };
+		2FB4F82F23E0D9650052616A /* NSView+FMPExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB4F82D23E0D9650052616A /* NSView+FMPExtensions.h */; };
+		2FB4F83023E0D9650052616A /* NSView+FMPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4F82E23E0D9650052616A /* NSView+FMPExtensions.m */; };
+		2FB4F86323E211ED0052616A /* NSImage+FMPExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB4F86123E211ED0052616A /* NSImage+FMPExtensions.h */; };
+		2FB4F86423E211ED0052616A /* NSImage+FMPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4F86223E211ED0052616A /* NSImage+FMPExtensions.m */; };
+		2FB4F86723E21E2D0052616A /* FMPBundleHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB4F86523E21E2D0052616A /* FMPBundleHelper.h */; };
+		2FB4F86823E21E2D0052616A /* FMPBundleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4F86623E21E2D0052616A /* FMPBundleHelper.m */; };
+		2FB4F86A23E2232D0052616A /* FMPLocalizedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB4F86923E2232D0052616A /* FMPLocalizedString.h */; };
+		2FB4F86C23E223480052616A /* FMPLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4F86B23E223480052616A /* FMPLocalizedString.m */; };
+		2FB4F89823E2371B0052616A /* FMPInterfaceSettings+ObservableProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB4F89623E2371B0052616A /* FMPInterfaceSettings+ObservableProperties.h */; };
+		2FB4F89923E2371B0052616A /* FMPInterfaceSettings+ObservableProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4F89723E2371B0052616A /* FMPInterfaceSettings+ObservableProperties.m */; };
+		2FC418F32424185F00D97546 /* FMPTextControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FC418F22424185F00D97546 /* FMPTextControl.h */; };
+		2FC418FE24242B4700D97546 /* FMPTextViewScroller.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FC418FC24242B4700D97546 /* FMPTextViewScroller.h */; };
+		2FC418FF24242B4700D97546 /* FMPTextViewScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC418FD24242B4700D97546 /* FMPTextViewScroller.m */; };
+		2FD1526F23D6DD6D00EE0BC2 /* FMPFeedbackForm.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD1526D23D6DD6D00EE0BC2 /* FMPFeedbackForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FD1527D23D6DE2800EE0BC2 /* FMPFeedbackController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD1527B23D6DE2800EE0BC2 /* FMPFeedbackController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FD1527E23D6DE2800EE0BC2 /* FMPFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1527C23D6DE2800EE0BC2 /* FMPFeedbackController.m */; };
+		2FD1528123D6DE8E00EE0BC2 /* FMPFeedbackSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD1528023D6DE8E00EE0BC2 /* FMPFeedbackSender.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FD152AE23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD152AC23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FD152AF23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD152AD23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.m */; };
+		2FD152B423D724F200EE0BC2 /* FMPInterfaceSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD152B223D724F200EE0BC2 /* FMPInterfaceSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FD152B523D724F200EE0BC2 /* FMPInterfaceSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD152B323D724F200EE0BC2 /* FMPInterfaceSettings.m */; };
+		2FD152B823D727F800EE0BC2 /* FMPWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD152B623D727F800EE0BC2 /* FMPWindow.h */; };
+		2FD152B923D727F800EE0BC2 /* FMPWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD152B723D727F800EE0BC2 /* FMPWindow.m */; };
+		2FD152BC23D887A100EE0BC2 /* FMPMainViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD152BA23D887A100EE0BC2 /* FMPMainViewController.h */; };
+		2FD152BD23D887A100EE0BC2 /* FMPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD152BB23D887A100EE0BC2 /* FMPMainViewController.m */; };
+		2FD152C623D887E500EE0BC2 /* FMPAttachmentsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD152C423D887E500EE0BC2 /* FMPAttachmentsViewController.h */; };
+		2FD152C723D887E500EE0BC2 /* FMPAttachmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD152C523D887E500EE0BC2 /* FMPAttachmentsViewController.m */; };
+		2FD16DD624313C3400EBE15B /* NSTextField+FMPExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD16DD524313C3400EBE15B /* NSTextField+FMPExtensions.h */; };
+		2FD16DFF24313CBF00EBE15B /* NSTextField+FMPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD16DFE24313CBF00EBE15B /* NSTextField+FMPExtensions.m */; };
+		2FD16E0624314C0100EBE15B /* FMPTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD16E0424314C0100EBE15B /* FMPTextFieldCell.h */; };
+		2FD16E0724314C0100EBE15B /* FMPTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD16E0524314C0100EBE15B /* FMPTextFieldCell.m */; };
+		2FD16E3A24322ED900EBE15B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FD16E3C24322ED900EBE15B /* Localizable.strings */; };
+		2FE6B51524202E32005C2EC2 /* NSError+FMPExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE6B51424202E32005C2EC2 /* NSError+FMPExtensions.h */; };
+		2FE6B51724202E4E005C2EC2 /* NSError+FMPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6B51624202E4E005C2EC2 /* NSError+FMPExtensions.m */; };
+		2FE6B51924203679005C2EC2 /* NSString+FMPExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE6B51824203679005C2EC2 /* NSString+FMPExtensions.h */; };
+		2FE6B51B2420368B005C2EC2 /* NSString+FMPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6B51A2420368B005C2EC2 /* NSString+FMPExtensions.m */; };
+		2FE6B525242361E0005C2EC2 /* NSObject+FMPExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE6B524242361E0005C2EC2 /* NSObject+FMPExtensions.h */; };
+		2FE6B52724236225005C2EC2 /* NSObject+FMPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6B52624236225005C2EC2 /* NSObject+FMPExtensions.m */; };
+		2FE6B52A24236298005C2EC2 /* FMPValidatedParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE6B52824236298005C2EC2 /* FMPValidatedParameters.h */; };
+		2FE6B52B24236298005C2EC2 /* FMPValidatedParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6B52924236298005C2EC2 /* FMPValidatedParameters.m */; };
+		2FE6B5552423F2C4005C2EC2 /* FMPTextControlValidationContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE6B5532423F2C4005C2EC2 /* FMPTextControlValidationContainer.h */; };
+		2FE6B5562423F2C4005C2EC2 /* FMPTextControlValidationContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6B5542423F2C4005C2EC2 /* FMPTextControlValidationContainer.m */; };
+		2FF41DE6240D450800C5B560 /* FMPSystemProfileViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FF41DE3240D450800C5B560 /* FMPSystemProfileViewController.h */; };
+		2FF41DE7240D450800C5B560 /* FMPSystemProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41DE4240D450800C5B560 /* FMPSystemProfileViewController.m */; };
+		2FF41E1D240E78C200C5B560 /* FMPDefaultSystemProfileProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FF41E1B240E78C200C5B560 /* FMPDefaultSystemProfileProvider.h */; };
+		2FF41E1E240E78C200C5B560 /* FMPDefaultSystemProfileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41E1C240E78C200C5B560 /* FMPDefaultSystemProfileProvider.m */; };
+		2FF41E21240EC01200C5B560 /* FMPTransparentSpinner.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FF41E1F240EC01200C5B560 /* FMPTransparentSpinner.h */; };
+		2FF41E22240EC01200C5B560 /* FMPTransparentSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41E20240EC01200C5B560 /* FMPTransparentSpinner.m */; };
+		2FF41E26240FEB4B00C5B560 /* FMPHostApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FF41E24240FEB4B00C5B560 /* FMPHostApplication.h */; };
+		2FF41E27240FEB4B00C5B560 /* FMPHostApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF41E25240FEB4B00C5B560 /* FMPHostApplication.m */; };
+		2FFBFC1B23E72E1B00B41736 /* FMPTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FFBFC1923E72E1B00B41736 /* FMPTextView.h */; };
+		2FFBFC1C23E72E1B00B41736 /* FMPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBFC1A23E72E1B00B41736 /* FMPTextView.m */; };
+		2FFBFC7323E7BE5000B41736 /* NSColor+FMPExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FFBFC7123E7BE5000B41736 /* NSColor+FMPExtensions.h */; };
+		2FFBFC7423E7BE5000B41736 /* NSColor+FMPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBFC7223E7BE5000B41736 /* NSColor+FMPExtensions.m */; };
+		2FFBFC7F23E85B4B00B41736 /* FMPTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FFBFC7D23E85B4B00B41736 /* FMPTextField.h */; };
+		2FFBFC8023E85B4B00B41736 /* FMPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBFC7E23E85B4B00B41736 /* FMPTextField.m */; };
+		2FFBFCAD23E8734C00B41736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FFBFCAC23E8734C00B41736 /* Assets.xcassets */; };
+		2FFBFCF023EC3D2000B41736 /* FMPFeedbackParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FFBFCEF23EC3D2000B41736 /* FMPFeedbackParameter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FFBFCF223EC3D4200B41736 /* FMPFeedbackParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBFCF123EC3D4200B41736 /* FMPFeedbackParameter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2F04460324352939003DFCEF /* FMPClipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPClipView.h; sourceTree = "<group>"; };
+		2F04460424352939003DFCEF /* FMPClipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPClipView.m; sourceTree = "<group>"; };
+		2F3E948A242CE52D00BF20C4 /* FMPTextFieldWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPTextFieldWrapper.h; sourceTree = "<group>"; };
+		2F3E948B242CE52D00BF20C4 /* FMPTextFieldWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPTextFieldWrapper.m; sourceTree = "<group>"; };
+		2F926E3423F24561007B41C0 /* FMPBorderedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPBorderedView.h; sourceTree = "<group>"; };
+		2F926E3523F24561007B41C0 /* FMPBorderedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPBorderedView.m; sourceTree = "<group>"; };
+		2F926E3C23F249F0007B41C0 /* FMPClickableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPClickableView.h; sourceTree = "<group>"; };
+		2F926E3D23F249F0007B41C0 /* FMPClickableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPClickableView.m; sourceTree = "<group>"; };
+		2F926E4023F25D04007B41C0 /* FMPLeftFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPLeftFlowLayout.h; sourceTree = "<group>"; };
+		2F926E4123F25D04007B41C0 /* FMPLeftFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPLeftFlowLayout.m; sourceTree = "<group>"; };
+		2F926E4423F43259007B41C0 /* FMPAttachmentsCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPAttachmentsCollectionView.h; sourceTree = "<group>"; };
+		2F926E4523F43259007B41C0 /* FMPAttachmentsCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPAttachmentsCollectionView.m; sourceTree = "<group>"; };
+		2F926E4823F43F1D007B41C0 /* FMPDefaultFileSelectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPDefaultFileSelectionManager.h; sourceTree = "<group>"; };
+		2F926E4923F43F1D007B41C0 /* FMPDefaultFileSelectionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPDefaultFileSelectionManager.m; sourceTree = "<group>"; };
+		2F95D72D24118C0E007FD4EF /* FMPSystemInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPSystemInfo.h; sourceTree = "<group>"; };
+		2F95D72E24118C0E007FD4EF /* FMPSystemInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPSystemInfo.m; sourceTree = "<group>"; };
+		2F95D75C2418E974007FD4EF /* FMPSystemProfileProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPSystemProfileProvider.h; sourceTree = "<group>"; };
+		2FA47A7C23F1D078005E4467 /* FMPAttachButtonItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPAttachButtonItem.h; sourceTree = "<group>"; };
+		2FA47A7D23F1D078005E4467 /* FMPAttachButtonItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPAttachButtonItem.m; sourceTree = "<group>"; };
+		2FA47A8023F1EBE5005E4467 /* FMPMaskedImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPMaskedImageView.h; sourceTree = "<group>"; };
+		2FA47A8123F1EBE5005E4467 /* FMPMaskedImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPMaskedImageView.m; sourceTree = "<group>"; };
+		2FA47A8823F22C40005E4467 /* FMPAttachmentItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPAttachmentItem.h; sourceTree = "<group>"; };
+		2FA47A8923F22C40005E4467 /* FMPAttachmentItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPAttachmentItem.m; sourceTree = "<group>"; };
+		2FAA0E4F240ADAC200D3851B /* FMPFileSelectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPFileSelectionManager.h; sourceTree = "<group>"; };
+		2FB4F82D23E0D9650052616A /* NSView+FMPExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+FMPExtensions.h"; sourceTree = "<group>"; };
+		2FB4F82E23E0D9650052616A /* NSView+FMPExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+FMPExtensions.m"; sourceTree = "<group>"; };
+		2FB4F86123E211ED0052616A /* NSImage+FMPExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSImage+FMPExtensions.h"; sourceTree = "<group>"; };
+		2FB4F86223E211ED0052616A /* NSImage+FMPExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSImage+FMPExtensions.m"; sourceTree = "<group>"; };
+		2FB4F86523E21E2D0052616A /* FMPBundleHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPBundleHelper.h; sourceTree = "<group>"; };
+		2FB4F86623E21E2D0052616A /* FMPBundleHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPBundleHelper.m; sourceTree = "<group>"; };
+		2FB4F86923E2232D0052616A /* FMPLocalizedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPLocalizedString.h; sourceTree = "<group>"; };
+		2FB4F86B23E223480052616A /* FMPLocalizedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPLocalizedString.m; sourceTree = "<group>"; };
+		2FB4F89623E2371B0052616A /* FMPInterfaceSettings+ObservableProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMPInterfaceSettings+ObservableProperties.h"; sourceTree = "<group>"; };
+		2FB4F89723E2371B0052616A /* FMPInterfaceSettings+ObservableProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FMPInterfaceSettings+ObservableProperties.m"; sourceTree = "<group>"; };
+		2FC418F22424185F00D97546 /* FMPTextControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPTextControl.h; sourceTree = "<group>"; };
+		2FC418FC24242B4700D97546 /* FMPTextViewScroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPTextViewScroller.h; sourceTree = "<group>"; };
+		2FC418FD24242B4700D97546 /* FMPTextViewScroller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPTextViewScroller.m; sourceTree = "<group>"; };
+		2FD1526A23D6DD6D00EE0BC2 /* FMPFeedbackForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMPFeedbackForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FD1526D23D6DD6D00EE0BC2 /* FMPFeedbackForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPFeedbackForm.h; sourceTree = "<group>"; };
+		2FD1526E23D6DD6D00EE0BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FD1527B23D6DE2800EE0BC2 /* FMPFeedbackController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPFeedbackController.h; sourceTree = "<group>"; };
+		2FD1527C23D6DE2800EE0BC2 /* FMPFeedbackController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPFeedbackController.m; sourceTree = "<group>"; };
+		2FD1528023D6DE8E00EE0BC2 /* FMPFeedbackSender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPFeedbackSender.h; sourceTree = "<group>"; };
+		2FD152AC23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPZendeskFeedbackSender.h; sourceTree = "<group>"; };
+		2FD152AD23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPZendeskFeedbackSender.m; sourceTree = "<group>"; };
+		2FD152B223D724F200EE0BC2 /* FMPInterfaceSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPInterfaceSettings.h; sourceTree = "<group>"; };
+		2FD152B323D724F200EE0BC2 /* FMPInterfaceSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPInterfaceSettings.m; sourceTree = "<group>"; };
+		2FD152B623D727F800EE0BC2 /* FMPWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPWindow.h; sourceTree = "<group>"; };
+		2FD152B723D727F800EE0BC2 /* FMPWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPWindow.m; sourceTree = "<group>"; };
+		2FD152BA23D887A100EE0BC2 /* FMPMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPMainViewController.h; sourceTree = "<group>"; };
+		2FD152BB23D887A100EE0BC2 /* FMPMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPMainViewController.m; sourceTree = "<group>"; };
+		2FD152C423D887E500EE0BC2 /* FMPAttachmentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPAttachmentsViewController.h; sourceTree = "<group>"; };
+		2FD152C523D887E500EE0BC2 /* FMPAttachmentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPAttachmentsViewController.m; sourceTree = "<group>"; };
+		2FD1532223DB45F300EE0BC2 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		2FD16DD524313C3400EBE15B /* NSTextField+FMPExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTextField+FMPExtensions.h"; sourceTree = "<group>"; };
+		2FD16DFE24313CBF00EBE15B /* NSTextField+FMPExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTextField+FMPExtensions.m"; sourceTree = "<group>"; };
+		2FD16E0424314C0100EBE15B /* FMPTextFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPTextFieldCell.h; sourceTree = "<group>"; };
+		2FD16E0524314C0100EBE15B /* FMPTextFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPTextFieldCell.m; sourceTree = "<group>"; };
+		2FD16E3B24322ED900EBE15B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FD16E3D24322EE400EBE15B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2FD16E3E24322EE600EBE15B /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FD16E3F24322EE800EBE15B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FD16E4024322EE800EBE15B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FD16E4124322EE900EBE15B /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FD16E4224322EEA00EBE15B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FD16E4324322EEC00EBE15B /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FD16E4424322EEC00EBE15B /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FD16E4524322EED00EBE15B /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2FD16E4624322EEE00EBE15B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FD16E4724322EEF00EBE15B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FD16E4824322EEF00EBE15B /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FE6B51424202E32005C2EC2 /* NSError+FMPExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+FMPExtensions.h"; sourceTree = "<group>"; };
+		2FE6B51624202E4E005C2EC2 /* NSError+FMPExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+FMPExtensions.m"; sourceTree = "<group>"; };
+		2FE6B51824203679005C2EC2 /* NSString+FMPExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+FMPExtensions.h"; sourceTree = "<group>"; };
+		2FE6B51A2420368B005C2EC2 /* NSString+FMPExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FMPExtensions.m"; sourceTree = "<group>"; };
+		2FE6B524242361E0005C2EC2 /* NSObject+FMPExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+FMPExtensions.h"; sourceTree = "<group>"; };
+		2FE6B52624236225005C2EC2 /* NSObject+FMPExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FMPExtensions.m"; sourceTree = "<group>"; };
+		2FE6B52824236298005C2EC2 /* FMPValidatedParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPValidatedParameters.h; sourceTree = "<group>"; };
+		2FE6B52924236298005C2EC2 /* FMPValidatedParameters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPValidatedParameters.m; sourceTree = "<group>"; };
+		2FE6B5532423F2C4005C2EC2 /* FMPTextControlValidationContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPTextControlValidationContainer.h; sourceTree = "<group>"; };
+		2FE6B5542423F2C4005C2EC2 /* FMPTextControlValidationContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPTextControlValidationContainer.m; sourceTree = "<group>"; };
+		2FF41DE3240D450800C5B560 /* FMPSystemProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPSystemProfileViewController.h; sourceTree = "<group>"; };
+		2FF41DE4240D450800C5B560 /* FMPSystemProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPSystemProfileViewController.m; sourceTree = "<group>"; };
+		2FF41E1B240E78C200C5B560 /* FMPDefaultSystemProfileProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPDefaultSystemProfileProvider.h; sourceTree = "<group>"; };
+		2FF41E1C240E78C200C5B560 /* FMPDefaultSystemProfileProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPDefaultSystemProfileProvider.m; sourceTree = "<group>"; };
+		2FF41E1F240EC01200C5B560 /* FMPTransparentSpinner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPTransparentSpinner.h; sourceTree = "<group>"; };
+		2FF41E20240EC01200C5B560 /* FMPTransparentSpinner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPTransparentSpinner.m; sourceTree = "<group>"; };
+		2FF41E24240FEB4B00C5B560 /* FMPHostApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPHostApplication.h; sourceTree = "<group>"; };
+		2FF41E25240FEB4B00C5B560 /* FMPHostApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPHostApplication.m; sourceTree = "<group>"; };
+		2FFBFC1923E72E1B00B41736 /* FMPTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPTextView.h; sourceTree = "<group>"; };
+		2FFBFC1A23E72E1B00B41736 /* FMPTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPTextView.m; sourceTree = "<group>"; };
+		2FFBFC7123E7BE5000B41736 /* NSColor+FMPExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSColor+FMPExtensions.h"; sourceTree = "<group>"; };
+		2FFBFC7223E7BE5000B41736 /* NSColor+FMPExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSColor+FMPExtensions.m"; sourceTree = "<group>"; };
+		2FFBFC7D23E85B4B00B41736 /* FMPTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPTextField.h; sourceTree = "<group>"; };
+		2FFBFC7E23E85B4B00B41736 /* FMPTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPTextField.m; sourceTree = "<group>"; };
+		2FFBFCAC23E8734C00B41736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FFBFCEF23EC3D2000B41736 /* FMPFeedbackParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPFeedbackParameter.h; sourceTree = "<group>"; };
+		2FFBFCF123EC3D4200B41736 /* FMPFeedbackParameter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPFeedbackParameter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2FD1526723D6DD6D00EE0BC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FA47A7723F1D010005E4467 /* AttachmentItems */ = {
+			isa = PBXGroup;
+			children = (
+				2FA47A7C23F1D078005E4467 /* FMPAttachButtonItem.h */,
+				2FA47A7D23F1D078005E4467 /* FMPAttachButtonItem.m */,
+				2FA47A8823F22C40005E4467 /* FMPAttachmentItem.h */,
+				2FA47A8923F22C40005E4467 /* FMPAttachmentItem.m */,
+			);
+			path = AttachmentItems;
+			sourceTree = "<group>";
+		};
+		2FAA0E4D240AD98700D3851B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2FD152AB23D6F0F700EE0BC2 /* FeedbackSender */,
+				2FAA0E4E240AD9C100D3851B /* FileSelectionManager */,
+				2FF41E23240FEB2600C5B560 /* HostApplication */,
+				2FB4F89A23E23C510052616A /* Settings */,
+				2FF41E18240E640400C5B560 /* SystemProfileProvider */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2FAA0E4E240AD9C100D3851B /* FileSelectionManager */ = {
+			isa = PBXGroup;
+			children = (
+				2FAA0E4F240ADAC200D3851B /* FMPFileSelectionManager.h */,
+				2F926E4823F43F1D007B41C0 /* FMPDefaultFileSelectionManager.h */,
+				2F926E4923F43F1D007B41C0 /* FMPDefaultFileSelectionManager.m */,
+			);
+			path = FileSelectionManager;
+			sourceTree = "<group>";
+		};
+		2FB4F83123E0E9CC0052616A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2FB4F82D23E0D9650052616A /* NSView+FMPExtensions.h */,
+				2FB4F82E23E0D9650052616A /* NSView+FMPExtensions.m */,
+				2FB4F86123E211ED0052616A /* NSImage+FMPExtensions.h */,
+				2FB4F86223E211ED0052616A /* NSImage+FMPExtensions.m */,
+				2FFBFC7123E7BE5000B41736 /* NSColor+FMPExtensions.h */,
+				2FFBFC7223E7BE5000B41736 /* NSColor+FMPExtensions.m */,
+				2FE6B51424202E32005C2EC2 /* NSError+FMPExtensions.h */,
+				2FE6B51624202E4E005C2EC2 /* NSError+FMPExtensions.m */,
+				2FE6B51824203679005C2EC2 /* NSString+FMPExtensions.h */,
+				2FE6B51A2420368B005C2EC2 /* NSString+FMPExtensions.m */,
+				2FE6B524242361E0005C2EC2 /* NSObject+FMPExtensions.h */,
+				2FE6B52624236225005C2EC2 /* NSObject+FMPExtensions.m */,
+				2FD16DD524313C3400EBE15B /* NSTextField+FMPExtensions.h */,
+				2FD16DFE24313CBF00EBE15B /* NSTextField+FMPExtensions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2FB4F83623E20C810052616A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2FB4F86523E21E2D0052616A /* FMPBundleHelper.h */,
+				2FB4F86623E21E2D0052616A /* FMPBundleHelper.m */,
+				2FB4F86923E2232D0052616A /* FMPLocalizedString.h */,
+				2FB4F86B23E223480052616A /* FMPLocalizedString.m */,
+				2F926E4023F25D04007B41C0 /* FMPLeftFlowLayout.h */,
+				2F926E4123F25D04007B41C0 /* FMPLeftFlowLayout.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2FB4F89A23E23C510052616A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2FD152B223D724F200EE0BC2 /* FMPInterfaceSettings.h */,
+				2FD152B323D724F200EE0BC2 /* FMPInterfaceSettings.m */,
+				2FB4F89623E2371B0052616A /* FMPInterfaceSettings+ObservableProperties.h */,
+				2FB4F89723E2371B0052616A /* FMPInterfaceSettings+ObservableProperties.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2FD1526023D6DD6C00EE0BC2 = {
+			isa = PBXGroup;
+			children = (
+				2FD1526C23D6DD6D00EE0BC2 /* FMPFeedbackForm */,
+				2FD1526B23D6DD6D00EE0BC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2FD1526B23D6DD6D00EE0BC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FD1526A23D6DD6D00EE0BC2 /* FMPFeedbackForm.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2FD1526C23D6DD6D00EE0BC2 /* FMPFeedbackForm */ = {
+			isa = PBXGroup;
+			children = (
+				2FD1526E23D6DD6D00EE0BC2 /* Info.plist */,
+				2FD1532223DB45F300EE0BC2 /* module.modulemap */,
+				2FD1526D23D6DD6D00EE0BC2 /* FMPFeedbackForm.h */,
+				2FD1527523D6DDCB00EE0BC2 /* Sources */,
+				2FFBFCAB23E8732200B41736 /* Resources */,
+			);
+			path = FMPFeedbackForm;
+			sourceTree = "<group>";
+		};
+		2FD1527523D6DDCB00EE0BC2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2FD152C823D89B2B00EE0BC2 /* WindowController */,
+				2FD152B123D6F12400EE0BC2 /* ViewControllers */,
+				2FFBFC1823E72DFE00B41736 /* Views */,
+				2FAA0E4D240AD98700D3851B /* Model */,
+				2FB4F83623E20C810052616A /* Utilities */,
+				2FB4F83123E0E9CC0052616A /* Extensions */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2FD152AB23D6F0F700EE0BC2 /* FeedbackSender */ = {
+			isa = PBXGroup;
+			children = (
+				2FD1528023D6DE8E00EE0BC2 /* FMPFeedbackSender.h */,
+				2FD152AC23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.h */,
+				2FD152AD23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.m */,
+				2FE6B52824236298005C2EC2 /* FMPValidatedParameters.h */,
+				2FE6B52924236298005C2EC2 /* FMPValidatedParameters.m */,
+				2FFBFCEF23EC3D2000B41736 /* FMPFeedbackParameter.h */,
+				2FFBFCF123EC3D4200B41736 /* FMPFeedbackParameter.m */,
+			);
+			path = FeedbackSender;
+			sourceTree = "<group>";
+		};
+		2FD152B123D6F12400EE0BC2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2FD152BA23D887A100EE0BC2 /* FMPMainViewController.h */,
+				2FD152BB23D887A100EE0BC2 /* FMPMainViewController.m */,
+				2FD152C423D887E500EE0BC2 /* FMPAttachmentsViewController.h */,
+				2FD152C523D887E500EE0BC2 /* FMPAttachmentsViewController.m */,
+				2FF41DE3240D450800C5B560 /* FMPSystemProfileViewController.h */,
+				2FF41DE4240D450800C5B560 /* FMPSystemProfileViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2FD152C823D89B2B00EE0BC2 /* WindowController */ = {
+			isa = PBXGroup;
+			children = (
+				2FD1527B23D6DE2800EE0BC2 /* FMPFeedbackController.h */,
+				2FD1527C23D6DE2800EE0BC2 /* FMPFeedbackController.m */,
+				2FD152B623D727F800EE0BC2 /* FMPWindow.h */,
+				2FD152B723D727F800EE0BC2 /* FMPWindow.m */,
+			);
+			path = WindowController;
+			sourceTree = "<group>";
+		};
+		2FE6B5522423EEC9005C2EC2 /* TextControls */ = {
+			isa = PBXGroup;
+			children = (
+				2FC418F22424185F00D97546 /* FMPTextControl.h */,
+				2FFBFC7D23E85B4B00B41736 /* FMPTextField.h */,
+				2FFBFC7E23E85B4B00B41736 /* FMPTextField.m */,
+				2F3E948A242CE52D00BF20C4 /* FMPTextFieldWrapper.h */,
+				2F3E948B242CE52D00BF20C4 /* FMPTextFieldWrapper.m */,
+				2FFBFC1923E72E1B00B41736 /* FMPTextView.h */,
+				2FFBFC1A23E72E1B00B41736 /* FMPTextView.m */,
+				2FC418FC24242B4700D97546 /* FMPTextViewScroller.h */,
+				2FC418FD24242B4700D97546 /* FMPTextViewScroller.m */,
+				2F04460324352939003DFCEF /* FMPClipView.h */,
+				2F04460424352939003DFCEF /* FMPClipView.m */,
+				2FE6B5532423F2C4005C2EC2 /* FMPTextControlValidationContainer.h */,
+				2FE6B5542423F2C4005C2EC2 /* FMPTextControlValidationContainer.m */,
+			);
+			path = TextControls;
+			sourceTree = "<group>";
+		};
+		2FF41E18240E640400C5B560 /* SystemProfileProvider */ = {
+			isa = PBXGroup;
+			children = (
+				2F95D75C2418E974007FD4EF /* FMPSystemProfileProvider.h */,
+				2FF41E1B240E78C200C5B560 /* FMPDefaultSystemProfileProvider.h */,
+				2FF41E1C240E78C200C5B560 /* FMPDefaultSystemProfileProvider.m */,
+				2F95D72D24118C0E007FD4EF /* FMPSystemInfo.h */,
+				2F95D72E24118C0E007FD4EF /* FMPSystemInfo.m */,
+			);
+			path = SystemProfileProvider;
+			sourceTree = "<group>";
+		};
+		2FF41E23240FEB2600C5B560 /* HostApplication */ = {
+			isa = PBXGroup;
+			children = (
+				2FF41E24240FEB4B00C5B560 /* FMPHostApplication.h */,
+				2FF41E25240FEB4B00C5B560 /* FMPHostApplication.m */,
+			);
+			path = HostApplication;
+			sourceTree = "<group>";
+		};
+		2FFBFC1823E72DFE00B41736 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2FA47A7723F1D010005E4467 /* AttachmentItems */,
+				2FE6B5522423EEC9005C2EC2 /* TextControls */,
+				2F926E3423F24561007B41C0 /* FMPBorderedView.h */,
+				2F926E3523F24561007B41C0 /* FMPBorderedView.m */,
+				2FA47A8023F1EBE5005E4467 /* FMPMaskedImageView.h */,
+				2FA47A8123F1EBE5005E4467 /* FMPMaskedImageView.m */,
+				2F926E3C23F249F0007B41C0 /* FMPClickableView.h */,
+				2F926E3D23F249F0007B41C0 /* FMPClickableView.m */,
+				2FF41E1F240EC01200C5B560 /* FMPTransparentSpinner.h */,
+				2FF41E20240EC01200C5B560 /* FMPTransparentSpinner.m */,
+				2F926E4423F43259007B41C0 /* FMPAttachmentsCollectionView.h */,
+				2F926E4523F43259007B41C0 /* FMPAttachmentsCollectionView.m */,
+				2FD16E0424314C0100EBE15B /* FMPTextFieldCell.h */,
+				2FD16E0524314C0100EBE15B /* FMPTextFieldCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2FFBFCAB23E8732200B41736 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2FFBFCAC23E8734C00B41736 /* Assets.xcassets */,
+				2FD16E3C24322ED900EBE15B /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2FD1526523D6DD6D00EE0BC2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FD152BC23D887A100EE0BC2 /* FMPMainViewController.h in Headers */,
+				2FA47A8223F1EBE5005E4467 /* FMPMaskedImageView.h in Headers */,
+				2FD1526F23D6DD6D00EE0BC2 /* FMPFeedbackForm.h in Headers */,
+				2FD152AE23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.h in Headers */,
+				2FB4F82F23E0D9650052616A /* NSView+FMPExtensions.h in Headers */,
+				2F04460524352939003DFCEF /* FMPClipView.h in Headers */,
+				2FD152B823D727F800EE0BC2 /* FMPWindow.h in Headers */,
+				2FD16E0624314C0100EBE15B /* FMPTextFieldCell.h in Headers */,
+				2FB4F86323E211ED0052616A /* NSImage+FMPExtensions.h in Headers */,
+				2FC418F32424185F00D97546 /* FMPTextControl.h in Headers */,
+				2FD16DD624313C3400EBE15B /* NSTextField+FMPExtensions.h in Headers */,
+				2FD1527D23D6DE2800EE0BC2 /* FMPFeedbackController.h in Headers */,
+				2FF41E1D240E78C200C5B560 /* FMPDefaultSystemProfileProvider.h in Headers */,
+				2FB4F89823E2371B0052616A /* FMPInterfaceSettings+ObservableProperties.h in Headers */,
+				2F926E4223F25D04007B41C0 /* FMPLeftFlowLayout.h in Headers */,
+				2FF41E21240EC01200C5B560 /* FMPTransparentSpinner.h in Headers */,
+				2FE6B525242361E0005C2EC2 /* NSObject+FMPExtensions.h in Headers */,
+				2FE6B51924203679005C2EC2 /* NSString+FMPExtensions.h in Headers */,
+				2F926E4623F43259007B41C0 /* FMPAttachmentsCollectionView.h in Headers */,
+				2FE6B52A24236298005C2EC2 /* FMPValidatedParameters.h in Headers */,
+				2FAA0E50240ADAC200D3851B /* FMPFileSelectionManager.h in Headers */,
+				2F926E4A23F43F1D007B41C0 /* FMPDefaultFileSelectionManager.h in Headers */,
+				2FD1528123D6DE8E00EE0BC2 /* FMPFeedbackSender.h in Headers */,
+				2FA47A7E23F1D078005E4467 /* FMPAttachButtonItem.h in Headers */,
+				2FFBFC1B23E72E1B00B41736 /* FMPTextView.h in Headers */,
+				2FA47A8A23F22C40005E4467 /* FMPAttachmentItem.h in Headers */,
+				2F95D72F24118C0E007FD4EF /* FMPSystemInfo.h in Headers */,
+				2F95D75D2418E974007FD4EF /* FMPSystemProfileProvider.h in Headers */,
+				2FB4F86A23E2232D0052616A /* FMPLocalizedString.h in Headers */,
+				2F926E3623F24561007B41C0 /* FMPBorderedView.h in Headers */,
+				2FFBFC7F23E85B4B00B41736 /* FMPTextField.h in Headers */,
+				2FB4F86723E21E2D0052616A /* FMPBundleHelper.h in Headers */,
+				2FD152C623D887E500EE0BC2 /* FMPAttachmentsViewController.h in Headers */,
+				2FE6B51524202E32005C2EC2 /* NSError+FMPExtensions.h in Headers */,
+				2FC418FE24242B4700D97546 /* FMPTextViewScroller.h in Headers */,
+				2F926E3E23F249F0007B41C0 /* FMPClickableView.h in Headers */,
+				2FD152B423D724F200EE0BC2 /* FMPInterfaceSettings.h in Headers */,
+				2FF41DE6240D450800C5B560 /* FMPSystemProfileViewController.h in Headers */,
+				2F3E948C242CE52D00BF20C4 /* FMPTextFieldWrapper.h in Headers */,
+				2FFBFCF023EC3D2000B41736 /* FMPFeedbackParameter.h in Headers */,
+				2FFBFC7323E7BE5000B41736 /* NSColor+FMPExtensions.h in Headers */,
+				2FE6B5552423F2C4005C2EC2 /* FMPTextControlValidationContainer.h in Headers */,
+				2FF41E26240FEB4B00C5B560 /* FMPHostApplication.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2FD1526923D6DD6D00EE0BC2 /* FMPFeedbackForm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FD1527223D6DD6D00EE0BC2 /* Build configuration list for PBXNativeTarget "FMPFeedbackForm" */;
+			buildPhases = (
+				2FD1526523D6DD6D00EE0BC2 /* Headers */,
+				2FD1526623D6DD6D00EE0BC2 /* Sources */,
+				2FD1526723D6DD6D00EE0BC2 /* Frameworks */,
+				2FD1526823D6DD6D00EE0BC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMPFeedbackForm;
+			productName = MPZFeedbackForm;
+			productReference = 2FD1526A23D6DD6D00EE0BC2 /* FMPFeedbackForm.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2FD1526123D6DD6C00EE0BC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = MacPaw;
+				TargetAttributes = {
+					2FD1526923D6DD6D00EE0BC2 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 2FD1526423D6DD6D00EE0BC2 /* Build configuration list for PBXProject "FMPFeedbackForm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+				uk,
+				"zh-Hans",
+				nl,
+				fr,
+				de,
+				it,
+				ja,
+				ko,
+				pl,
+				"pt-BR",
+				es,
+			);
+			mainGroup = 2FD1526023D6DD6C00EE0BC2;
+			productRefGroup = 2FD1526B23D6DD6D00EE0BC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2FD1526923D6DD6D00EE0BC2 /* FMPFeedbackForm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2FD1526823D6DD6D00EE0BC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FFBFCAD23E8734C00B41736 /* Assets.xcassets in Resources */,
+				2FD16E3A24322ED900EBE15B /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2FD1526623D6DD6D00EE0BC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB4F86C23E223480052616A /* FMPLocalizedString.m in Sources */,
+				2F926E4323F25D04007B41C0 /* FMPLeftFlowLayout.m in Sources */,
+				2FD16DFF24313CBF00EBE15B /* NSTextField+FMPExtensions.m in Sources */,
+				2FB4F86423E211ED0052616A /* NSImage+FMPExtensions.m in Sources */,
+				2FE6B51724202E4E005C2EC2 /* NSError+FMPExtensions.m in Sources */,
+				2F926E4B23F43F1D007B41C0 /* FMPDefaultFileSelectionManager.m in Sources */,
+				2F3E948D242CE52D00BF20C4 /* FMPTextFieldWrapper.m in Sources */,
+				2FD152B923D727F800EE0BC2 /* FMPWindow.m in Sources */,
+				2FFBFC1C23E72E1B00B41736 /* FMPTextView.m in Sources */,
+				2FE6B5562423F2C4005C2EC2 /* FMPTextControlValidationContainer.m in Sources */,
+				2F04460624352939003DFCEF /* FMPClipView.m in Sources */,
+				2FE6B52724236225005C2EC2 /* NSObject+FMPExtensions.m in Sources */,
+				2FD152BD23D887A100EE0BC2 /* FMPMainViewController.m in Sources */,
+				2F926E3723F24561007B41C0 /* FMPBorderedView.m in Sources */,
+				2FA47A8B23F22C40005E4467 /* FMPAttachmentItem.m in Sources */,
+				2FF41E27240FEB4B00C5B560 /* FMPHostApplication.m in Sources */,
+				2FD152C723D887E500EE0BC2 /* FMPAttachmentsViewController.m in Sources */,
+				2FD1527E23D6DE2800EE0BC2 /* FMPFeedbackController.m in Sources */,
+				2FD16E0724314C0100EBE15B /* FMPTextFieldCell.m in Sources */,
+				2FE6B51B2420368B005C2EC2 /* NSString+FMPExtensions.m in Sources */,
+				2FB4F83023E0D9650052616A /* NSView+FMPExtensions.m in Sources */,
+				2FA47A7F23F1D078005E4467 /* FMPAttachButtonItem.m in Sources */,
+				2F95D73024118C0E007FD4EF /* FMPSystemInfo.m in Sources */,
+				2FFBFC8023E85B4B00B41736 /* FMPTextField.m in Sources */,
+				2FD152B523D724F200EE0BC2 /* FMPInterfaceSettings.m in Sources */,
+				2FA47A8323F1EBE5005E4467 /* FMPMaskedImageView.m in Sources */,
+				2FB4F86823E21E2D0052616A /* FMPBundleHelper.m in Sources */,
+				2FC418FF24242B4700D97546 /* FMPTextViewScroller.m in Sources */,
+				2FFBFC7423E7BE5000B41736 /* NSColor+FMPExtensions.m in Sources */,
+				2FF41E22240EC01200C5B560 /* FMPTransparentSpinner.m in Sources */,
+				2FE6B52B24236298005C2EC2 /* FMPValidatedParameters.m in Sources */,
+				2FFBFCF223EC3D4200B41736 /* FMPFeedbackParameter.m in Sources */,
+				2F926E3F23F249F0007B41C0 /* FMPClickableView.m in Sources */,
+				2F926E4723F43259007B41C0 /* FMPAttachmentsCollectionView.m in Sources */,
+				2FF41E1E240E78C200C5B560 /* FMPDefaultSystemProfileProvider.m in Sources */,
+				2FD152AF23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.m in Sources */,
+				2FF41DE7240D450800C5B560 /* FMPSystemProfileViewController.m in Sources */,
+				2FB4F89923E2371B0052616A /* FMPInterfaceSettings+ObservableProperties.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2FD16E3C24322ED900EBE15B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FD16E3B24322ED900EBE15B /* en */,
+				2FD16E3D24322EE400EBE15B /* zh-Hans */,
+				2FD16E3E24322EE600EBE15B /* nl */,
+				2FD16E3F24322EE800EBE15B /* fr */,
+				2FD16E4024322EE800EBE15B /* de */,
+				2FD16E4124322EE900EBE15B /* it */,
+				2FD16E4224322EEA00EBE15B /* ja */,
+				2FD16E4324322EEC00EBE15B /* ko */,
+				2FD16E4424322EEC00EBE15B /* pl */,
+				2FD16E4524322EED00EBE15B /* pt-BR */,
+				2FD16E4624322EEE00EBE15B /* ru */,
+				2FD16E4724322EEF00EBE15B /* es */,
+				2FD16E4824322EEF00EBE15B /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2FD1527023D6DD6D00EE0BC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2FD1527123D6DD6D00EE0BC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2FD1527323D6DD6D00EE0BC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S8EX82NJP6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FMPFeedbackForm/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macpaw.FMPFeedbackForm;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2FD1527423D6DD6D00EE0BC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S8EX82NJP6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FMPFeedbackForm/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macpaw.FMPFeedbackForm;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FD1526423D6DD6D00EE0BC2 /* Build configuration list for PBXProject "FMPFeedbackForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FD1527023D6DD6D00EE0BC2 /* Debug */,
+				2FD1527123D6DD6D00EE0BC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FD1527223D6DD6D00EE0BC2 /* Build configuration list for PBXNativeTarget "FMPFeedbackForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FD1527323D6DD6D00EE0BC2 /* Debug */,
+				2FD1527423D6DD6D00EE0BC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2FD1526123D6DD6C00EE0BC2 /* Project object */;
+}

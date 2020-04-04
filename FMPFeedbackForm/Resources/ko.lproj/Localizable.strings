@@ -1,0 +1,52 @@
+/* 
+  Localizable.strings
+  FMPFeedbackForm
+
+  Created by Anton Barkov on 30.03.2020.
+  Copyright © 2020 MacPaw. All rights reserved.
+*/
+
+/* Invalid email error text. */
+"Incorrect email" = "유효하지 않은 이메일";
+
+/* System profile checkbox title. */
+"Send anonymous system profile" = "익명으로 시스템 프로필 보내기";
+
+/* Send feedback button caption. */
+"Send Feedback" = "피드백 전송";
+
+/* Send feedback button caption. */
+"Sending..." = "전송 중...";
+
+/* Tab title in system profile pop-up */
+"System" = "시스템";
+
+/* Tab title in system profile pop-up */
+"Console" = "콘솔";
+
+/* Tab title in system profile pop-up */
+"Preferences" = "환경설정";
+
+/* Attach file button caption. */
+"Attach File..." = "파일 첨부...";
+
+/* Feedback form title. */
+"Provide Feedback" = "피드백 보내기";
+
+/* Feedback form description. */
+"Please provide a detailed description of your problem, suggestion, bug-report or question so that we have a clear picture of your request and react to it with maximum effectiveness." = "여러분의 요청을 더욱 잘 파악하고 최대한 도와드릴 수 있도록 문제점이나 제안, 버그 리포트 또는 질문을 상세히 알려주세요.";
+
+/* Feedback subject option. */
+"Feedback" = "피드백";
+
+/* Feedback subject option. */
+"Support Request" = "지원 요청";
+
+/* Feedback subject option. */
+"Bug Report" = "버그 리포트";
+
+/* Customer name field placeholder. Any generic name and surname specific to the language, nothing too funny though. */
+"John Appleseed" = "John Appleseed";
+
+/* Feedback details field placeholder. */
+"Write your message here..." = "여기 메시지를 작성하세요...";
