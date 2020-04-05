@@ -96,6 +96,12 @@ static CGFloat textControlFontSize = 13.0;
     [self updateUIWithSettings];
 }
 
+- (void)viewDidAppear
+{
+    [super viewDidAppear];
+    [self focusFirstEmptyField];
+}
+
 // MARK: - Settings observation
 
 - (void)setSettings:(FMPInterfaceSettings *)settings
@@ -480,6 +486,22 @@ static CGFloat textControlFontSize = 13.0;
         [self.iconContainer setHidden:YES];
         [self.formContainerToIconContainerLeftConstraint setActive:NO];
         [self.formContainerToSuperviewLeftConstraint setActive:YES];
+    }
+}
+
+- (void)focusFirstEmptyField
+{
+    if (self.nameFieldWrapper.trimmedStringValue.length == 0)
+    {
+        [self.view.window makeFirstResponder:self.nameFieldWrapper.view];
+    }
+    else if (self.emailFieldContainer.textControl.trimmedStringValue.length == 0)
+    {
+        [self.view.window makeFirstResponder:self.emailFieldContainer.textControl.view];
+    }
+    else
+    {
+        [self.view.window makeFirstResponder:self.detailsFieldContainer.textControl.view];
     }
 }
 
