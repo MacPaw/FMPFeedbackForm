@@ -31,7 +31,8 @@
 
 @implementation FMPDefaultSystemProfileProvider
 
-@synthesize logURLs = _logURLs;
+@synthesize logURLs;
+@synthesize userDefaultsDomain;
 
 - (instancetype)init
 {
@@ -54,6 +55,7 @@
     self.gatherDataCompletions = [NSMutableArray new];
     self.writeFileCompletions = [NSMutableArray new];
     self.previousDataGatheringTime = [NSDate dateWithTimeIntervalSince1970:0];
+    self.logURLs = @[];
 }
 
 // MARK: - FMPSystemProfileProvider
@@ -181,7 +183,15 @@
 
 - (NSString *)appPreferencesForHostApplication
 {
-    NSString *domainName = FMPHostApplication.sharedInstance.bundleID ?: @"";
+    NSString *domainName;
+    if (self.userDefaultsDomain.length > 0)
+    {
+        domainName = self.userDefaultsDomain;
+    }
+    else
+    {
+        domainName = FMPHostApplication.sharedInstance.bundleID ?: @"";
+    }
     NSDictionary *prefsDict = [[NSUserDefaults standardUserDefaults] persistentDomainForName:domainName];
     return [prefsDict description];
 }

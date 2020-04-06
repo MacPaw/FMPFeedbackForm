@@ -32,6 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @discussion Won't work with directory URL, please specify separate text files.
 @property (nonatomic, strong) NSArray<NSURL *> *logURLs;
 
+/// User defaults domain (or suite name) that is used to get app preferences for system profile report.
+/// @discussion Use this property in case your app uses a domain different from its bundle ID.
+@property (nonatomic, copy, nullable) NSString *userDefaultsDomain;
+
 /// An object that contains texts and an optional icon to be displayed in form UI.
 @property (nonatomic, strong) FMPInterfaceSettings *settings;
 

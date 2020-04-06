@@ -75,6 +75,18 @@
     return self.systemProfileProvider.logURLs;
 }
 
+// MARK: - User defaults domain
+
+- (void)setUserDefaultsDomain:(NSString *)userDefaultsDomain
+{
+    self.systemProfileProvider.userDefaultsDomain = userDefaultsDomain;
+}
+
+- (NSString *)userDefaultsDomain
+{
+    return self.systemProfileProvider.userDefaultsDomain;
+}
+
 // MARK: - Settings
 
 - (void)setSettings:(FMPInterfaceSettings *)settings

@@ -17,6 +17,7 @@ typedef void (^FMPGatherSystemProfileCompletion)(NSString *_Nullable systemInfo,
 
 @protocol FMPSystemProfileProvider <NSObject>
 
+@property (nonatomic, copy, nullable) NSString *userDefaultsDomain;
 @property (nonatomic, strong) NSArray<NSURL *> *logURLs;
 - (void)gatherSystemProfileDataWithCompletion:(nullable FMPGatherSystemProfileCompletion)completion;
 - (void)writeSystemProfileToFileWithCompletion:(nullable FMPWriteSystemProfileCompletion)completion;
