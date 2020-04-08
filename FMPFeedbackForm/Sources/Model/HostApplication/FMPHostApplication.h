@@ -12,9 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMPHostApplication : NSObject
 
-- (instancetype)init NS_UNAVAILABLE;
-+ (instancetype)new NS_UNAVAILABLE;
-
 + (instancetype)sharedInstance;
 
 @property (nonatomic, copy, readonly) NSString *name;
