@@ -18,13 +18,22 @@
 
 @implementation FMPHostApplication
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        [self setup];
+    }
+    return self;
+}
+
 + (instancetype)sharedInstance
 {
     static FMPHostApplication *hostApplication = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        hostApplication = [super new];
-        [hostApplication setup];
+        hostApplication = [self new];
     });
     return hostApplication;
 }
