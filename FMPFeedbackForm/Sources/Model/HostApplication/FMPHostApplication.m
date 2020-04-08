@@ -23,7 +23,7 @@
     static FMPHostApplication *hostApplication = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        hostApplication = [self new];
+        hostApplication = [super new];
         [hostApplication setup];
     });
     return hostApplication;
