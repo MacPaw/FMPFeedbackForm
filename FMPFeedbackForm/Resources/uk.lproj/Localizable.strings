@@ -58,10 +58,10 @@
 "Please check your Internet connection or Firewall settings and try again." = "Будь ласка, перевірте своє з'єднання з Інтернет або налаштування брандмауера та спробуйте ще раз.";
 
 /* Generic error title. */
-"An error occurred while sending report." = "An error occurred while sending report.";
+"An error occurred while sending report." = "Виникла помилка надсилання звіту.";
 
 /* Generic error text. */
-"Please make sure you've filled the form correctly and try again (error code: %@)." = "Please make sure you've filled the form correctly and try again (error code: %@).";
+"Please make sure you've filled the form correctly and try again (error code: %@)." = "Будь ласка, впевніться, що форму заповнено коректно та спробуйте ще раз (код помилки: %@).";
 
 /* Successful feedback send message title. */
 "Feedback successfully sent!" = "Відгук надіслано!";

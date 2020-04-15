@@ -58,10 +58,10 @@
 "Please check your Internet connection or Firewall settings and try again." = "Por favor compruebe su conexión a Internet o la configuración de su Firewall y vuelva a intentarlo.";
 
 /* Generic error title. */
-"An error occurred while sending report." = "An error occurred while sending report.";
+"An error occurred while sending report." = "Se ha producido un error al enviar el informe.";
 
 /* Generic error text. */
-"Please make sure you've filled the form correctly and try again (error code: %@)." = "Please make sure you've filled the form correctly and try again (error code: %@).";
+"Please make sure you've filled the form correctly and try again (error code: %@)." = "Comprueba que has rellenado el formulario correctamente y vuelve a intentarlo (código de error: %@).";
 
 /* Successful feedback send message title. */
 "Feedback successfully sent!" = "¡Comentarios enviados con éxito!";

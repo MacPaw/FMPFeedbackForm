@@ -58,10 +58,10 @@
 "Please check your Internet connection or Firewall settings and try again." = "インターネット接続またはファイアウォール設定を確認し、もう一度お試しください。";
 
 /* Generic error title. */
-"An error occurred while sending report." = "An error occurred while sending report.";
+"An error occurred while sending report." = "報告を送信中にエラーが起きました。";
 
 /* Generic error text. */
-"Please make sure you've filled the form correctly and try again (error code: %@)." = "Please make sure you've filled the form correctly and try again (error code: %@).";
+"Please make sure you've filled the form correctly and try again (error code: %@)." = "フォームが正しく入力されているか確認してからやり直してください (エラーコード: %@)。";
 
 /* Successful feedback send message title. */
 "Feedback successfully sent!" = "フィードバックが正常に送信されました!";

@@ -58,10 +58,10 @@
 "Please check your Internet connection or Firewall settings and try again." = "请检查您的网络连接或者防火墙设置，重试";
 
 /* Generic error title. */
-"An error occurred while sending report." = "An error occurred while sending report.";
+"An error occurred while sending report." = "发送报告时出错。";
 
 /* Generic error text. */
-"Please make sure you've filled the form correctly and try again (error code: %@)." = "Please make sure you've filled the form correctly and try again (error code: %@).";
+"Please make sure you've filled the form correctly and try again (error code: %@)." = "请确保您正确填写了表单并重试（错误代码: %@）。";
 
 /* Successful feedback send message title. */
 "Feedback successfully sent!" = "反馈发送成功！";
