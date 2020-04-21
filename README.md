@@ -45,6 +45,10 @@ recent console logs and preferences (NSUserDefaults) of your application.
 If the default look of the form doesn't quite suit your needs, you may easily customize any text, 
 field value or placeholder using a handy interface.
 
+## Requirements
+
+`FMPFeedbackForm` requires macOS 10.12 or later.
+
 ## Installation
 
 ### CocoaPods
@@ -92,6 +96,8 @@ var feedbackController: FMPFeedbackController?
 ```
 
 That's it, you've just displayed a basic form that'll send feedback to your project on Zendesk!
+
+![Basic form](/Screenshots/3.png)
 
 For clarity, let's break down the credentials that you pass on `FMPZendeskFeedbackSender` init:
 1) This is the subdomain of your Zendesk project — the `subdomain` in `https://subdomain.zendesk.com`.
@@ -170,7 +176,7 @@ if it hasn't been turned off):
 ```
 
 ### System profile report
-FMPFeedbackForm gathers data for system profile report _almost_ without any of your input, but to achieve better quality 
+`FMPFeedbackForm` gathers data for system profile report _almost_ without any of your input, but to achieve better quality 
 of gathered data you may need to specify two things.
 
 The console logs of your application are collected using the Apple System Log API, which doesn't always provide all of the
@@ -183,9 +189,20 @@ in the report:
                                    URL(fileURLWithPath: "path/to/otherFile.txt")]
 ```
 
-You may also want to specify your custom NSUserDefaults domain (or suite name) in case you use something different from your
+You may also want to specify your custom `NSUserDefaults` domain (or suite name) in case you use something different from your
 app's bundle ID:
 
 ```swift
     feedbackController?.userDefaultsDomain = "com.MyCompany.MyAppsNonDefaultDomain"
 ```
+
+## Demo app
+
+Most of the logic described above is conveniently implemented in the demo app available in this repository. 
+Please refer for a more detailed look on how to use the feedback form.
+
+![Demo app](/Screenshots/4.png)
+
+## License
+
+`FMPFeedbackForm` is available under the MIT license. See the LICENSE file for more info.
