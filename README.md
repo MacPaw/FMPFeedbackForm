@@ -180,7 +180,7 @@ if it hasn't been turned off):
 ```
 
 ### System profile report
-`FMPFeedbackForm` gathers data for system profile report _almost_ without any of your input, but to achieve better quality 
+`FMPFeedbackForm` gathers data for system profile report _almost_ without any of your input, yet to achieve better quality 
 of gathered data you may need to specify two things.
 
 The console logs of your application are collected using the Apple System Log API, which doesn't always provide all of the
