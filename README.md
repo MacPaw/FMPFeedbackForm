@@ -97,7 +97,9 @@ var feedbackController: FMPFeedbackController?
 
 That's it, you've just displayed a basic form that'll send feedback to your project on Zendesk!
 
-![Basic form](/Screenshots/3.png)
+<p align="center">
+<img src="/Screenshots/3.png" height="600"/>
+</p>
 
 For clarity, let's break down the credentials that you pass on `FMPZendeskFeedbackSender` init:
 1) This is the subdomain of your Zendesk project — the `subdomain` in `https://subdomain.zendesk.com`.
@@ -153,7 +155,9 @@ You may change the way the form behaves after successfull/failed feedback submis
 By default `FMPFeedbackController` handles these events gracefully by showing a localized alert and closing the form's window on success,
 or by presenting an error sheet over the form's window in case of error.
 
-You can turn this off by setting `false` to these properties:
+![Defaut behaviour](/Screenshots/5.png)
+
+You can turn this off by setting these properties to `false`:
 ```swift
     feedbackController?.showsGenericSuccessAlert = false
     feedbackController?.showsGenericErrorSheet = false
@@ -199,7 +203,7 @@ app's bundle ID:
 ## Demo app
 
 Most of the logic described above is conveniently implemented in the demo app available in this repository. 
-Please refer for a more detailed look on how to use the feedback form.
+Please refer to it for a more detailed look on how to use the feedback form.
 
 ![Demo app](/Screenshots/4.png)
 
