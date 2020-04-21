@@ -24,30 +24,30 @@ NS_ASSUME_NONNULL_BEGIN
 /// @discussion Defaults to 64x64.
 @property (nonatomic, assign) NSSize iconSize;
 
-/// A string that is displayed in the form's title label.
+/// The form's title label text.
 @property (nonatomic, copy) NSString *title;
 
-/// A string that is displayed in the form's subtitle label.
+/// The form's subtitle label text.
 @property (nonatomic, copy) NSString *subtitle;
 
 /// An array of strings representing support ticket subjects.
 @property (nonatomic, copy) NSArray<NSString *> *subjectOptions;
 
-/// A string value of the form's name field placeholder.
+/// The form's name field placeholder text.
 @property (nonatomic, copy) NSString *namePlaceholder;
 
-/// A string value of the form's email field placeholder.
+/// The form's email field placeholder text.
 @property (nonatomic, copy) NSString *emailPlaceholder;
 
-/// A string value of the form's details field placeholder.
+/// The form's details field placeholder text.
 @property (nonatomic, copy) NSString *detailsPlaceholder;
 
-/// A string value to set in the form's name field.
+/// The form's name field value.
 /// @discussion Use this property in case you already know the user's name
 ///             and want to prefill the form for him.
 @property (nonatomic, copy) NSString *defaultName;
 
-/// A string value to set in the form's email field.
+/// The form's email field value.
 /// @discussion Use this property in case you already know the user's email
 ///             and want to prefill the form for him.
 @property (nonatomic, copy) NSString *defaultEmail;

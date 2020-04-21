@@ -15,7 +15,7 @@ typedef void (^FMPSendFeedbackCompletion)(NSError *_Nullable error);
 
 @protocol FMPFeedbackSender <NSObject>
 
-/// The method that sends the data submitted by the form to a desired location.
+/// Sends the data submitted by the form to a desired service.
 /// @param parameters A dictionary containing all the data submitted by the form. See @c FMPFeedbackParameter enum for the list of possible keys.
 /// @param completion A block that should be executed after data sending attempt, has nullable @c NSError as a parameter.
 /// You should pass an error if something fails, otherwise execute it with @c nil.
