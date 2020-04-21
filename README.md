@@ -58,13 +58,13 @@ TODO
 TODO
 
 ### Manual
-Clone this repository and drag the FMPFeedbackForm.xcodedeproj into your project. 
-Then go to your target's General settings and add the FMPFeedbackForm.framework 
-in the "Frameworks, Libraries, and Embedded Content" list.
+Clone this repository (or add it as a submodule) and drag the FMPFeedbackForm.xcodedeproj into your project in Xcode. 
+Then go to your target's General settings tab and add the FMPFeedbackForm.framework 
+to the "Frameworks, Libraries, and Embedded Content" list.
+
+See `FMPDemoApp` project for an example of this method.
 
 ![Add framework manually](/Screenshots/2.png)
-
-See FMPDemoApp project for an example of this method.
 
 ## Usage
 ### Initializing FMPFeedbackController
@@ -112,7 +112,7 @@ You may look up the `FMPZendeskFeedbackSender.m` file to get the basic idea of w
 
 ### UI Customization
 
-The way form looks is defined by the controller's `settings` property which is represented by an `FMPInterfaceSettings` object.
+The way the form looks is defined by the controller's `settings` property which is represented by an `FMPInterfaceSettings` object.
 It contains all the strings used in the form's UI and you may also specify an icon to display in the form's top left corner.
 
 There are two ways to change the form's settings:
@@ -209,4 +209,5 @@ Please refer to it for a more detailed look on how to use the feedback form.
 
 ## License
 
-`FMPFeedbackForm` is available under the MIT license. See the LICENSE file for more info.
+`FMPFeedbackForm` is available under the MIT license.   
+See the LICENSE file for more info.
