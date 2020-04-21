@@ -134,7 +134,7 @@ There are two ways to change the form's settings:
     
     // Or update the controller's settings after init:
     feedbackController?.settings.title = "My App feedback"
-    feedbackController?.settings.title = "We'd love to know what you think of our product."
+    feedbackController?.settings.subtitle = "We'd love to know what you think of our product."
     feedbackController?.settings.subjectOptions = ["Feedback", "Bug Report", "Support Request"]
     let iconResource = NSImage(contentsOf: "path/to/icon.png") {
         feedbackController?.settings.icon = iconResource
