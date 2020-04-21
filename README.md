@@ -1,7 +1,8 @@
 # FMPFeedbackForm
-![FMPFeedbackForm](/Screenshots/1.png)
 
 FMPFeedbackForm is an Objective-C framework that lets you add a simple yet effective feedback form to your macOS project.
+
+![FMPFeedbackForm](/Screenshots/1.png)
 
 ## Features
 
@@ -113,6 +114,7 @@ There are two ways to change the form's settings:
     let settings = FMPInterfaceSettings.default
     settings.title = "My App feedback"
     settings.subtitle = "We'd love to know what you think of our product."
+    settings.subjectOptions = ["Feedback", "Bug Report", "Support Request"]
     let iconResource = NSImage(contentsOf: "path/to/icon.png") {
         settings.icon = iconResource
         settings.iconSize = NSSize(width: 64, height: 64) // default value
@@ -125,10 +127,18 @@ There are two ways to change the form's settings:
     // Or update the controller's settings after init:
     feedbackController?.settings.title = "My App feedback"
     feedbackController?.settings.title = "We'd love to know what you think of our product."
+    feedbackController?.settings.subjectOptions = ["Feedback", "Bug Report", "Support Request"]
     let iconResource = NSImage(contentsOf: "path/to/icon.png") {
         feedbackController?.settings.icon = iconResource
         feedbackController?.settings.iconSize = NSSize(width: 64, height: 64) // default value
     }
+```
+
+You may also specify the user's name and email to simplify filling out the form:
+
+```swift
+    feedbackController?.settings.defaultName = "John Doe"
+    feedbackController?.settings.defaultEmail = "john.doe@gmail.com"
 ```
 
 ### Behaviour on submission
