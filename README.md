@@ -15,6 +15,10 @@ The form's UI includes a checkbox which allows the user to attach a text file to
 which contains anonymous information about the user's machine. This report includes a list of software and hardware specs,
 recent console logs and preferences (NSUserDefaults) of your application.
 
+### Customizable UI
+If the default look of the form doesn't quite suit your needs, you may easily customize any text, 
+field value or placeholder using a handy interface.
+
 ### Localized into 12 languages
 <table>
 <tr>
@@ -41,13 +45,9 @@ recent console logs and preferences (NSUserDefaults) of your application.
 </tr>
 </table>
 
-### Customizable UI
-If the default look of the form doesn't quite suit your needs, you may easily customize any text, 
-field value or placeholder using a handy interface.
-
 ## Requirements
 
-`FMPFeedbackForm` requires macOS 10.12 or later.
+FMPFeedbackForm requires macOS 10.12 or later.
 
 ## Installation
 
@@ -209,5 +209,6 @@ Please refer to it for a more detailed look on how to use the feedback form.
 
 ## License
 
-`FMPFeedbackForm` is available under the MIT license.   
-See the LICENSE file for more info.
+FMPFeedbackForm is available under the MIT license.
+
+See the [LICENSE](/LICENSE) file for more info.
