@@ -40,17 +40,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) FMPInterfaceSettings *settings;
 
 /// A block that is executed after form submission.
-/// @discussion The @c error parameter contains an error in case of a failed request. In case of success -  @c error is  @c nil.
+/// @discussion The @c error parameter contains an error in case of a failed request. In case of success —  @c error is  @c nil.
 @property (nonatomic, copy, nullable) void(^onDidSendFeedback)(NSError *_Nullable error);
 
 /// A flag that determines form behaviour after successful submission.
-/// @discussion If @c YES (default value) - after successful feedback submission the form window is closed and an alert with localized success message is displayed.
-///             If @c NO - nothing happens.
+/// @discussion If @c YES (default value) — after successful feedback submission the form window is closed and an alert with localized success message is displayed.
+///             If @c NO — nothing happens.
 @property (nonatomic, assign) BOOL showsGenericSuccessAlert;
 
 /// A flag that determines form behaviour after failed submission.
-/// @discussion If @c YES (default value) - after failed feedback submission an alert containing localized error description is presented as a sheet in the form window.
-///             If @c NO - nothing happens.
+/// @discussion If @c YES (default value) — after failed feedback submission an alert containing localized error description is presented as a sheet in the form window.
+///             If @c NO — nothing happens.
 @property (nonatomic, assign) BOOL showsGenericErrorSheet;
 
 /// A string value of the name form field.
