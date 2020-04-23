@@ -428,13 +428,14 @@ static CGFloat textControlFontSize = 13.0;
 {
     self.progressSpinner = [NSProgressIndicator fmp_newAutoLayout];
     self.progressSpinner.style = NSProgressIndicatorSpinningStyle;
-    [self.progressSpinner setControlSize:NSSmallControlSize];
     [self.progressSpinner startAnimation:self];
     [self.progressSpinner setHidden:YES];
     [self.formContainer addSubview:self.progressSpinner];
     [NSLayoutConstraint activateConstraints:@[
         [self.progressSpinner.rightAnchor constraintEqualToAnchor:self.sendButton.leftAnchor constant:-10],
-        [self.progressSpinner.centerYAnchor constraintEqualToAnchor:self.sendButton.centerYAnchor]
+        [self.progressSpinner.centerYAnchor constraintEqualToAnchor:self.sendButton.centerYAnchor],
+        [self.progressSpinner.heightAnchor constraintEqualToConstant:16],
+        [self.progressSpinner.widthAnchor constraintEqualToConstant:16]
     ]];
 }
 
