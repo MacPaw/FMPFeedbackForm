@@ -2,7 +2,7 @@
 
 FMPFeedbackForm is an Objective-C framework that lets you add a simple yet effective feedback form to your macOS project.
 
-![FMPFeedbackForm](/Screenshots/1.png)
+![FMPFeedbackForm](https://github.com/MacPaw/FMPFeedbackForm/blob/master/Screenshots/1.png?raw=true)
 
 ## Features
 
@@ -52,19 +52,25 @@ FMPFeedbackForm requires macOS 10.12 or later.
 ## Installation
 
 ### CocoaPods
-TODO
+FMPFeedbackForm is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
+```ruby
+pod 'FMPFeedbackForm'
+```
 
 ### Carthage
-TODO
+FMPFeedbackForm is available through [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your Cartfile:
+```ruby
+github "MacPaw/FMPFeedbackForm"
+```
 
 ### Manual
-Clone this repository (or add it as a submodule) and drag the FMPFeedbackForm.xcodedeproj into your project in Xcode. 
-Then go to your target's General settings tab and add the FMPFeedbackForm.framework 
+Clone this repository (or add it as a submodule) and drag the `FMPFeedbackForm.xcodedeproj` into your project in Xcode. 
+Then go to your target's General settings tab and add the `FMPFeedbackForm.framework`
 to the "Frameworks, Libraries, and Embedded Content" list.
 
 See `FMPDemoApp` project for an example of this method.
 
-![Add framework manually](/Screenshots/2.png)
+![Add framework manually](https://github.com/MacPaw/FMPFeedbackForm/blob/master/Screenshots/2.png?raw=true)
 
 ## Usage
 ### Initializing FMPFeedbackController
@@ -91,14 +97,13 @@ var feedbackController: FMPFeedbackController?
     feedbackController = FMPFeedbackController(feedbackSender: zendeskSender)
     // Present the form
     feedbackController?.showWindow(self)
-    feedbackController?.window?.center()
 }
 ```
 
 That's it, you've just displayed a basic form that'll send feedback to your project on Zendesk!
 
 <p align="center">
-<img src="/Screenshots/3.png" height="600"/>
+<img src="https://github.com/MacPaw/FMPFeedbackForm/blob/master/Screenshots/3.png?raw=true" height="600"/>
 </p>
 
 For clarity, let's break down the credentials that you pass on `FMPZendeskFeedbackSender` init:
@@ -123,7 +128,7 @@ There are two ways to change the form's settings:
     settings.title = "My App feedback"
     settings.subtitle = "We'd love to know what you think of our product."
     settings.subjectOptions = ["Feedback", "Bug Report", "Support Request"]
-    let iconResource = NSImage(contentsOf: "path/to/icon.png") {
+    if let iconResource = NSImage(contentsOf: "path/to/icon.png") {
         settings.icon = iconResource
         settings.iconSize = NSSize(width: 64, height: 64) // default value
     }
@@ -136,7 +141,7 @@ There are two ways to change the form's settings:
     feedbackController?.settings.title = "My App feedback"
     feedbackController?.settings.subtitle = "We'd love to know what you think of our product."
     feedbackController?.settings.subjectOptions = ["Feedback", "Bug Report", "Support Request"]
-    let iconResource = NSImage(contentsOf: "path/to/icon.png") {
+    if let iconResource = NSImage(contentsOf: "path/to/icon.png") {
         feedbackController?.settings.icon = iconResource
         feedbackController?.settings.iconSize = NSSize(width: 64, height: 64) // default value
     }
@@ -155,7 +160,7 @@ You may change the way the form behaves after successfull/failed feedback submis
 By default `FMPFeedbackController` handles these events gracefully by showing a localized alert and closing the form's window on success,
 or by presenting an error sheet over the form's window in case of error.
 
-![Defaut behaviour](/Screenshots/5.png)
+![Defaut behaviour](https://github.com/MacPaw/FMPFeedbackForm/blob/master/Screenshots/5.png?raw=true)
 
 You can turn this off by setting these properties to `false`:
 ```swift
@@ -205,7 +210,7 @@ app's bundle ID:
 Most of the logic described above is conveniently implemented in the demo app available in this repository. 
 Please refer to it for a more detailed look on how to use the feedback form.
 
-![Demo app](/Screenshots/4.png)
+![Demo app](https://github.com/MacPaw/FMPFeedbackForm/blob/master/Screenshots/4.png?raw=true)
 
 ## License
 
