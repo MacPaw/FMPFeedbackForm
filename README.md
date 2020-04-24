@@ -65,7 +65,7 @@ github "MacPaw/FMPFeedbackForm"
 
 ### Manual
 Clone this repository (or add it as a submodule) and drag the `FMPFeedbackForm.xcodedeproj` into your project in Xcode. 
-Then go to your target's General settings tab and add the `FMPFeedbackForm.framework `
+Then go to your target's General settings tab and add the `FMPFeedbackForm.framework`
 to the "Frameworks, Libraries, and Embedded Content" list.
 
 See `FMPDemoApp` project for an example of this method.
