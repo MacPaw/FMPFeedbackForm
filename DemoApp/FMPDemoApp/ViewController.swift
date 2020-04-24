@@ -112,7 +112,6 @@ class ViewController: NSViewController {
         }
         
         feedbackController?.showWindow(self)
-        feedbackController?.window?.center()
     }
     
     // MARK: - Helpers

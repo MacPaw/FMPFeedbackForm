@@ -97,7 +97,6 @@ var feedbackController: FMPFeedbackController?
     feedbackController = FMPFeedbackController(feedbackSender: zendeskSender)
     // Present the form
     feedbackController?.showWindow(self)
-    feedbackController?.window?.center()
 }
 ```
 
@@ -129,7 +128,7 @@ There are two ways to change the form's settings:
     settings.title = "My App feedback"
     settings.subtitle = "We'd love to know what you think of our product."
     settings.subjectOptions = ["Feedback", "Bug Report", "Support Request"]
-    let iconResource = NSImage(contentsOf: "path/to/icon.png") {
+    if let iconResource = NSImage(contentsOf: "path/to/icon.png") {
         settings.icon = iconResource
         settings.iconSize = NSSize(width: 64, height: 64) // default value
     }
@@ -142,7 +141,7 @@ There are two ways to change the form's settings:
     feedbackController?.settings.title = "My App feedback"
     feedbackController?.settings.subtitle = "We'd love to know what you think of our product."
     feedbackController?.settings.subjectOptions = ["Feedback", "Bug Report", "Support Request"]
-    let iconResource = NSImage(contentsOf: "path/to/icon.png") {
+    if let iconResource = NSImage(contentsOf: "path/to/icon.png") {
         feedbackController?.settings.icon = iconResource
         feedbackController?.settings.iconSize = NSSize(width: 64, height: 64) // default value
     }

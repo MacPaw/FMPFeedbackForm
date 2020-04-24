@@ -63,6 +63,12 @@
     return [FMPMainViewController fmp_dynamicCastObject:self.contentViewController];
 }
 
+- (void)showWindow:(id)sender
+{
+    [super showWindow:sender];
+    [self.window center];
+}
+
 // MARK: - Log URLs
 
 - (void)setLogURLs:(NSArray<NSURL *> *)logURLs
