@@ -7,7 +7,7 @@ FMPFeedbackForm is an Objective-C framework that lets you add a simple yet effec
 ## Features
 
 ### Out of the box Zendesk support
-If you work with Zendesk you'll get the form up an running with only 10-ish lines of code. You may as well adapt the form to 
+If you work with Zendesk you'll get the form up and running with only 10-ish lines of code. You may as well adapt the form to 
 send feedback to any other service by providing your own implementation of a certain data sender object without much hassle.
 
 ### System profile report
