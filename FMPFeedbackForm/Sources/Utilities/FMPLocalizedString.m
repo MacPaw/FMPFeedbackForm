@@ -11,5 +11,9 @@
 
 NSString *FMPLocalizedString(NSString *key, NSString *comment)
 {
+#if SWIFT_PACKAGE
+    return [SWIFTPM_MODULE_BUNDLE localizedStringForKey:key value:key table:nil];
+#else
     return [FMPBundleHelper.currentBundle localizedStringForKey:key value:key table:nil];
+#endif
 }
