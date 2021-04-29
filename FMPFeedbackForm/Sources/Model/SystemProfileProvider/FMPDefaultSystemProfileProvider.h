@@ -7,7 +7,7 @@
 //
 
 @import Foundation;
-#import <FMPFeedbackForm/FMPSystemProfileProvider.h>
+#import "FMPSystemProfileProvider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
