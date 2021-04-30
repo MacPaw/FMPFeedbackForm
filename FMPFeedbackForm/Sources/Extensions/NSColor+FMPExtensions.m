@@ -70,11 +70,7 @@
 {
     if (@available(macOS 10.13, *))
     {
-#if SWIFT_PACKAGE
-        return [NSColor colorNamed:colorName bundle:SWIFTPM_MODULE_BUNDLE];
-#else
         return [NSColor colorNamed:colorName bundle:FMPBundleHelper.currentBundle];
-#endif
     }
     else
     {

@@ -13,11 +13,7 @@
 
 + (instancetype)fmp_imageNamed:(NSString *)imageName
 {
-#if SWIFT_PACKAGE
-    return [SWIFTPM_MODULE_BUNDLE imageForResource:imageName];
-#else
     return [FMPBundleHelper.currentBundle imageForResource:imageName];
-#endif
 }
 
 - (NSImage *)fmp_maskedImageWithColor:(NSColor *)color
