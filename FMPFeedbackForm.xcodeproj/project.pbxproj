@@ -90,7 +90,20 @@
 		2FFBFCAD23E8734C00B41736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FFBFCAC23E8734C00B41736 /* Assets.xcassets */; };
 		2FFBFCF023EC3D2000B41736 /* FMPFeedbackParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FFBFCEF23EC3D2000B41736 /* FMPFeedbackParameter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FFBFCF223EC3D4200B41736 /* FMPFeedbackParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBFCF123EC3D4200B41736 /* FMPFeedbackParameter.m */; };
+		BD600D1A260E102F0037CEBF /* FMPFeedbackForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD1526A23D6DD6D00EE0BC2 /* FMPFeedbackForm.framework */; };
+		BD600D25260E10E70037CEBF /* NSString+FMPExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD600D24260E10E70037CEBF /* NSString+FMPExtensionsTests.m */; };
+		BD600D28260E10FD0037CEBF /* NSString+FMPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6B51A2420368B005C2EC2 /* NSString+FMPExtensions.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD600D1B260E102F0037CEBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FD1526123D6DD6C00EE0BC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FD1526923D6DD6D00EE0BC2;
+			remoteInfo = FMPFeedbackForm;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2F04460324352939003DFCEF /* FMPClipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPClipView.h; sourceTree = "<group>"; };
@@ -191,6 +204,9 @@
 		2FFBFCAC23E8734C00B41736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FFBFCEF23EC3D2000B41736 /* FMPFeedbackParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPFeedbackParameter.h; sourceTree = "<group>"; };
 		2FFBFCF123EC3D4200B41736 /* FMPFeedbackParameter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPFeedbackParameter.m; sourceTree = "<group>"; };
+		BD600D15260E102F0037CEBF /* FMPFeedbackFormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMPFeedbackFormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD600D19260E102F0037CEBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD600D24260E10E70037CEBF /* NSString+FMPExtensionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FMPExtensionsTests.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +214,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD600D12260E102F0037CEBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD600D1A260E102F0037CEBF /* FMPFeedbackForm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				2FD1526C23D6DD6D00EE0BC2 /* FMPFeedbackForm */,
+				BD600D16260E102F0037CEBF /* FMPFeedbackFormTests */,
 				2FD1526B23D6DD6D00EE0BC2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -294,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				2FD1526A23D6DD6D00EE0BC2 /* FMPFeedbackForm.framework */,
+				BD600D15260E102F0037CEBF /* FMPFeedbackFormTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -432,6 +458,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		BD600D16260E102F0037CEBF /* FMPFeedbackFormTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD600D19260E102F0037CEBF /* Info.plist */,
+				BD600D24260E10E70037CEBF /* NSString+FMPExtensionsTests.m */,
+			);
+			path = FMPFeedbackFormTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -506,6 +541,24 @@
 			productReference = 2FD1526A23D6DD6D00EE0BC2 /* FMPFeedbackForm.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		BD600D14260E102F0037CEBF /* FMPFeedbackFormTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD600D1F260E102F0037CEBF /* Build configuration list for PBXNativeTarget "FMPFeedbackFormTests" */;
+			buildPhases = (
+				BD600D11260E102F0037CEBF /* Sources */,
+				BD600D12260E102F0037CEBF /* Frameworks */,
+				BD600D13260E102F0037CEBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD600D1C260E102F0037CEBF /* PBXTargetDependency */,
+			);
+			name = FMPFeedbackFormTests;
+			productName = FMPFeedbackFormTests;
+			productReference = BD600D15260E102F0037CEBF /* FMPFeedbackFormTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -517,6 +570,9 @@
 				TargetAttributes = {
 					2FD1526923D6DD6D00EE0BC2 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					BD600D14260E102F0037CEBF = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -546,6 +602,7 @@
 			projectRoot = "";
 			targets = (
 				2FD1526923D6DD6D00EE0BC2 /* FMPFeedbackForm */,
+				BD600D14260E102F0037CEBF /* FMPFeedbackFormTests */,
 			);
 		};
 /* End PBXProject section */
@@ -557,6 +614,13 @@
 			files = (
 				2FFBFCAD23E8734C00B41736 /* Assets.xcassets in Resources */,
 				2FD16E3A24322ED900EBE15B /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD600D13260E102F0037CEBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,7 +672,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD600D11260E102F0037CEBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD600D28260E10FD0037CEBF /* NSString+FMPExtensions.m in Sources */,
+				BD600D25260E10E70037CEBF /* NSString+FMPExtensionsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD600D1C260E102F0037CEBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FD1526923D6DD6D00EE0BC2 /* FMPFeedbackForm */;
+			targetProxy = BD600D1B260E102F0037CEBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2FD16E3C24322ED900EBE15B /* Localizable.strings */ = {
@@ -807,6 +888,44 @@
 			};
 			name = Release;
 		};
+		BD600D1D260E102F0037CEBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FMPFeedbackFormTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macpaw.FMPFeedbackFormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD600D1E260E102F0037CEBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FMPFeedbackFormTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macpaw.FMPFeedbackFormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -824,6 +943,15 @@
 			buildConfigurations = (
 				2FD1527323D6DD6D00EE0BC2 /* Debug */,
 				2FD1527423D6DD6D00EE0BC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD600D1F260E102F0037CEBF /* Build configuration list for PBXNativeTarget "FMPFeedbackFormTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD600D1D260E102F0037CEBF /* Debug */,
+				BD600D1E260E102F0037CEBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
