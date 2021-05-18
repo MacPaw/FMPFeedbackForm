@@ -7,7 +7,7 @@
 //
 
 @import Foundation;
-#import <FMPFeedbackForm/FMPFeedbackSender.h>
+#import "FMPFeedbackSender.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -7,7 +7,7 @@
 //
 
 @import Cocoa;
-#import <FMPFeedbackForm/FMPTextControl.h>
+#import "FMPTextControl.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

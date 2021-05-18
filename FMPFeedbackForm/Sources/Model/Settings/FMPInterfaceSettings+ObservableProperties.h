@@ -6,7 +6,7 @@
 //  Copyright © 2020 MacPaw. All rights reserved.
 //
 
-#import <FMPFeedbackForm/FMPFeedbackForm.h>
+#import "FMPFeedbackForm.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
