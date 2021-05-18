@@ -7,7 +7,7 @@
 //
 
 @import Cocoa;
-#import <FMPFeedbackForm/FMPFileSelectionManager.h>
+#import "FMPFileSelectionManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

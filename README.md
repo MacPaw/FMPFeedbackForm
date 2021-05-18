@@ -63,6 +63,29 @@ FMPFeedbackForm is available through [Carthage](https://github.com/Carthage/Cart
 github "MacPaw/FMPFeedbackForm"
 ```
 
+### Swift Package Manager
+
+* Add package into Project settings -> Swift Packages
+
+If you want to use FMPFeedbackForm as dependency to another package, add following to your Package.swift:
+
+```
+dependencies: [
+    ...
+    .package(url: "https://github.com/MacPaw/FMPFeedbackForm", .upToNextMajor(from: "1.0.0"))
+],
+...
+targets: [
+    .target(
+        name: ...
+        dependencies: [
+            ...,
+            "FMPFeedbackForm"
+        ]
+    )
+]
+```
+
 ### Manual
 Clone this repository (or add it as a submodule) and drag the `FMPFeedbackForm.xcodedeproj` into your project in Xcode. 
 Then go to your target's General settings tab and add the `FMPFeedbackForm.framework`

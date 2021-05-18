@@ -8,9 +8,9 @@
 
 @import Cocoa;
 @protocol FMPFileSelectionManager;
-#import <FMPFeedbackForm/FMPInterfaceSettings.h>
-#import <FMPFeedbackForm/FMPFeedbackSender.h>
-#import <FMPFeedbackForm/FMPSystemProfileProvider.h>
+#import "FMPInterfaceSettings.h"
+#import "FMPFeedbackSender.h"
+#import "FMPSystemProfileProvider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

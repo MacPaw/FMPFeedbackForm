@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/MacPaw/FMPFeedbackForm.git", :tag => "v#{spec.version}" }
 
   spec.source_files  = "FMPFeedbackForm/**/*.{h,m}"
+  spec.exclude_files = "FMPFeedbackForm/include/**"
   spec.resources = "FMPFeedbackForm/Resources/*"
   spec.requires_arc = true
 
