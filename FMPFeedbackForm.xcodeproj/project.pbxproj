@@ -93,6 +93,8 @@
 		BD600D1A260E102F0037CEBF /* FMPFeedbackForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD1526A23D6DD6D00EE0BC2 /* FMPFeedbackForm.framework */; };
 		BD600D25260E10E70037CEBF /* NSString+FMPExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD600D24260E10E70037CEBF /* NSString+FMPExtensionsTests.m */; };
 		BD600D28260E10FD0037CEBF /* NSString+FMPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6B51A2420368B005C2EC2 /* NSString+FMPExtensions.m */; };
+		C5F429F4267BC144009A9F05 /* FMPViewControllers.h in Headers */ = {isa = PBXBuildFile; fileRef = C5F429F3267BC144009A9F05 /* FMPViewControllers.h */; };
+		C5F429F8267BC174009A9F05 /* FMPViews.h in Headers */ = {isa = PBXBuildFile; fileRef = C5F429F7267BC174009A9F05 /* FMPViews.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +209,8 @@
 		BD600D15260E102F0037CEBF /* FMPFeedbackFormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMPFeedbackFormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD600D19260E102F0037CEBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD600D24260E10E70037CEBF /* NSString+FMPExtensionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FMPExtensionsTests.m"; sourceTree = "<group>"; };
+		C5F429F3267BC144009A9F05 /* FMPViewControllers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPViewControllers.h; sourceTree = "<group>"; };
+		C5F429F7267BC174009A9F05 /* FMPViews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPViews.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +376,7 @@
 				2FD152C523D887E500EE0BC2 /* FMPAttachmentsViewController.m */,
 				2FF41DE3240D450800C5B560 /* FMPSystemProfileViewController.h */,
 				2FF41DE4240D450800C5B560 /* FMPSystemProfileViewController.m */,
+				C5F429F3267BC144009A9F05 /* FMPViewControllers.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 				2F926E4523F43259007B41C0 /* FMPAttachmentsCollectionView.m */,
 				2FD16E0424314C0100EBE15B /* FMPTextFieldCell.h */,
 				2FD16E0524314C0100EBE15B /* FMPTextFieldCell.m */,
+				C5F429F7267BC174009A9F05 /* FMPViews.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -497,12 +503,14 @@
 				2FAA0E50240ADAC200D3851B /* FMPFileSelectionManager.h in Headers */,
 				2F926E4A23F43F1D007B41C0 /* FMPDefaultFileSelectionManager.h in Headers */,
 				2FD1528123D6DE8E00EE0BC2 /* FMPFeedbackSender.h in Headers */,
+				C5F429F4267BC144009A9F05 /* FMPViewControllers.h in Headers */,
 				2FA47A7E23F1D078005E4467 /* FMPAttachButtonItem.h in Headers */,
 				2FFBFC1B23E72E1B00B41736 /* FMPTextView.h in Headers */,
 				2FA47A8A23F22C40005E4467 /* FMPAttachmentItem.h in Headers */,
 				2F95D72F24118C0E007FD4EF /* FMPSystemInfo.h in Headers */,
 				2F95D75D2418E974007FD4EF /* FMPSystemProfileProvider.h in Headers */,
 				2FB4F86A23E2232D0052616A /* FMPLocalizedString.h in Headers */,
+				C5F429F8267BC174009A9F05 /* FMPViews.h in Headers */,
 				2F926E3623F24561007B41C0 /* FMPBorderedView.h in Headers */,
 				2FFBFC7F23E85B4B00B41736 /* FMPTextField.h in Headers */,
 				2FB4F86723E21E2D0052616A /* FMPBundleHelper.h in Headers */,
@@ -838,7 +846,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -852,7 +860,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.macpaw.FMPFeedbackForm;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -866,7 +874,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -880,7 +888,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.macpaw.FMPFeedbackForm;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

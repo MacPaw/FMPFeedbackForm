@@ -11,3 +11,6 @@
 #import <FMPFeedbackForm/FMPZendeskFeedbackSender.h>
 #import <FMPFeedbackForm/FMPFeedbackController.h>
 #import <FMPFeedbackForm/FMPInterfaceSettings.h>
+#import <FMPFeedbackForm/FMPDefaultFileSelectionManager.h>
+#import <FMPFeedbackForm/FMPViewControllers.h>
+#import <FMPFeedbackForm/FMPViews.h>
