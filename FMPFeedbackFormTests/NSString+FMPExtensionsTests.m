@@ -7,7 +7,7 @@
 //
 
 @import XCTest;
-#import "NSString+FMPExtensions.h"
+@import FMPFeedbackForm;
 
 @interface NSString_FMPExtensionsTests : XCTestCase
 
