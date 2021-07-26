@@ -14,6 +14,8 @@
 
 typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nullable uploadsToken);
 
+static NSString *const FMPFeedbackParameterPlaceholder = @"UserName";
+
 @interface FMPZendeskFeedbackSender ()
 @property (nonatomic, copy) NSString *authToken;
 @property (nonatomic, copy) NSString *productName;
@@ -63,6 +65,8 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
     if (name.length > 0)
     {
         [requesterDict setObject:name forKey:@"name"];
+    } else {
+        [requesterDict setObject:FMPFeedbackParameterPlaceholder forKey:@"name"];
     }
     
     // Upload files if needed
