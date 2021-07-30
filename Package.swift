@@ -21,7 +21,19 @@ let package = Package(
             name: "FMPFeedbackForm",
             path: "FMPFeedbackForm",
             exclude: ["Info.plist"],
-            resources: [.process("Resources")]
-        )
+            resources: [.process("Resources")],
+            cSettings: [
+                .headerSearchPath("FMPFeedbackForm/include"),
+            ]
+        ),
+        .testTarget(
+            name: "FMPFeedbackFormTests",
+            dependencies: ["FMPFeedbackForm"],
+            path: "FMPFeedbackFormTests",
+            exclude: ["Info.plist"],
+            cSettings: [
+                .define("UNIT_TESTS")
+            ]
+        ),
     ]
 )
