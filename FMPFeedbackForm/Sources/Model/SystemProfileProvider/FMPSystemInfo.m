@@ -304,6 +304,7 @@ static NSString *const kCPUInfoCoreCount = @"core_count";
     char *cName = strdup([sysctlName UTF8String]);
     if (noErr != sysctlbyname(cName, NULL, &size, NULL, 0))
     {
+        free(cName);
         return nil;
     }
     
