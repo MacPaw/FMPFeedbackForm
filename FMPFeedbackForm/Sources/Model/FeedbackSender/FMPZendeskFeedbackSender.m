@@ -263,7 +263,7 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
 }
 
 - (FMPValidatedParameters *)validateRequiredParameters:(NSDictionary<FMPFeedbackParameter, id> *)parameters
-                                                 error:(NSError **)errorPtr
+                                                 error:(NSError ** _Nonnull)errorPtr
 {
     NSString *email = [NSString fmp_dynamicCastObject:parameters[FMPFeedbackParameterEmail]];
     if (!email)
