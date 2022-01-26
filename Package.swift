@@ -7,7 +7,7 @@ let package = Package(
     name: "FMPFeedbackForm",
     defaultLocalization: "en",
     platforms: [
-        .macOS(.v10_12)
+        .macOS(.v10_10)
     ],
     products: [
     .library(
