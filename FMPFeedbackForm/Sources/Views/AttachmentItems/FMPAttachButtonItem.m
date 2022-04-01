@@ -15,8 +15,8 @@
 #import "FMPMaskedImageView.h"
 #import "FMPClickableView.h"
 
-static CGFloat iconWidth = 12.0;
-static CGFloat iconHeight = 14.0;
+static CGFloat iconWidth = 16.0;
+static CGFloat iconHeight = 16.0;
 static CGFloat iconToCaptionSpacing = 2.0;
 
 @interface FMPAttachButtonItem () <FMPClickableViewDelegate>
@@ -47,7 +47,7 @@ static CGFloat iconToCaptionSpacing = 2.0;
     [self.view addSubview:self.attachImage];
     [NSLayoutConstraint activateConstraints:@[
         [self.attachImage.leftAnchor constraintEqualToAnchor:self.view.leftAnchor],
-        [self.attachImage.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:3.0],
+        [self.attachImage.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:2.0],
         [self.attachImage.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-3.0],
         [self.attachImage.widthAnchor constraintEqualToConstant:iconWidth],
         [self.attachImage.heightAnchor constraintEqualToConstant:iconHeight]
