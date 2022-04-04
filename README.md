@@ -69,7 +69,7 @@ github "MacPaw/FMPFeedbackForm"
 
 If you want to use FMPFeedbackForm as dependency to another package, add following to your Package.swift:
 
-```
+```swift
 dependencies: [
     ...
     .package(url: "https://github.com/MacPaw/FMPFeedbackForm", .upToNextMajor(from: "1.0.0"))
@@ -143,10 +143,11 @@ You may look up the `FMPZendeskFeedbackSender.m` file to get the basic idea of w
 The way the form looks is defined by the controller's `settings` property which is represented by an `FMPInterfaceSettings` object.
 It contains all the strings used in the form's UI and you may also specify an icon to display in the form's top left corner.
 
-There are two ways to change the form's settings:
+There are two ways to change the form's settings.
+
+1) Pass an updated settings object to the controller's initializer:
 
 ```swift
-    // Pass an updated settings object to the controller's initializer:
     let settings = FMPInterfaceSettings.default
     settings.title = "My App feedback"
     settings.subtitle = "We'd love to know what you think of our product."
@@ -157,10 +158,11 @@ There are two ways to change the form's settings:
     }
     
     feedbackController = FMPFeedbackController(feedbackSender: sender, settings: settings)
-    
-    ...
-    
-    // Or update the controller's settings after init:
+```
+
+2) Or update the controller's settings after init:
+
+```swift
     feedbackController?.settings.title = "My App feedback"
     feedbackController?.settings.subtitle = "We'd love to know what you think of our product."
     feedbackController?.settings.subjectOptions = ["Feedback", "Bug Report", "Support Request"]

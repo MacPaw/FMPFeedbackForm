@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (FMPExtensions)
-+ (instancetype)fmp_dynamicCastObject:(id)object;
++ (nullable instancetype)fmp_dynamicCastObject:(id)object;
 @end
 
 NS_ASSUME_NONNULL_END

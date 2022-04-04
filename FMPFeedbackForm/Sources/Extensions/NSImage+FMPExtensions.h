@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSImage (FMPExtensions)
 
-+ (instancetype)fmp_imageNamed:(NSString *)imageName;
-- (NSImage *)fmp_maskedImageWithColor:(NSColor *)color;
++ (nullable instancetype)fmp_imageNamed:(NSString *)imageName;
+- (nullable NSImage *)fmp_maskedImageWithColor:(NSColor *)color;
 
 @end
 

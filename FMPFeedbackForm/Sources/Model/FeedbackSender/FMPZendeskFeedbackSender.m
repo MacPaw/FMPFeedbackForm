@@ -59,11 +59,10 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
     NSMutableDictionary *requesterDict = [NSMutableDictionary dictionaryWithDictionary:@{
         @"email": validParameters.email
     }];
+    
     NSString *name = [NSString fmp_dynamicCastObject:parameters[FMPFeedbackParameterName]];
-    if (name.length > 0)
-    {
-        [requesterDict setObject:name forKey:@"name"];
-    }
+    NSString *nonEmptyName = name.length > 0 ? name : @"Anonymous";
+    [requesterDict setObject:nonEmptyName forKey:@"name"];
     
     // Upload files if needed
     NSMutableArray<NSURL *> *filesToUpload = [NSMutableArray new];
@@ -179,7 +178,7 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
     NSString *urlString = [NSString stringWithFormat:@"https://%@.zendesk.com/api/v2/uploads.json?filename=%@%@",
                            self.subdomain, fileNameString, tokenString];
     
-    // Prepeare request
+    // Prepare request
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setValue:@"application/binary" forHTTPHeaderField:@"Content-Type"];
@@ -187,7 +186,7 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
     [request setHTTPBody:fileData];
     [request setHTTPMethod:@"POST"];
     
-    // Send requst
+    // Send request
     __weak typeof(self) weakSelf = self;
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request
                                                                  completionHandler:^(NSData * _Nullable data,
@@ -263,7 +262,7 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
 }
 
 - (FMPValidatedParameters *)validateRequiredParameters:(NSDictionary<FMPFeedbackParameter, id> *)parameters
-                                                 error:(NSError **)errorPtr
+                                                 error:(NSError ** _Nonnull)errorPtr
 {
     NSString *email = [NSString fmp_dynamicCastObject:parameters[FMPFeedbackParameterEmail]];
     if (!email)
