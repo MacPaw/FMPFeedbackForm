@@ -17,7 +17,6 @@
 #import "FMPViewControllers.h"
 #import "FMPViews.h"
 
-#if UNIT_TESTS
 #import "FMPAttachButtonItem.h"
 #import "FMPAttachmentItem.h"
 #import "FMPAttachmentsCollectionView.h"
@@ -44,4 +43,3 @@
 #import "NSTextField+FMPExtensions.h"
 #import "NSView+FMPExtensions.h"
 #import "NSString+FMPExtensions.h"
-#endif
