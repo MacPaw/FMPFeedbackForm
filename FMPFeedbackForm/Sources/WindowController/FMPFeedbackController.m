@@ -50,6 +50,7 @@
     FMPDefaultFileSelectionManager *fileSelectionMaganer = [[FMPDefaultFileSelectionManager alloc] initWithWindow:self.window];
     self.systemProfileProvider = [FMPDefaultSystemProfileProvider new];
     
+    self.window.title = settings.windowTitle;
     FMPMainViewController *mainViewController = [FMPMainViewController makeWithFeedbackSender:feedbackSender
                                                                          fileSelectionManager:fileSelectionMaganer
                                                                         systemProfileProvider:self.systemProfileProvider

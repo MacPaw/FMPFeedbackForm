@@ -24,7 +24,7 @@
     settings.namePlaceholder = FMPLocalizedString(@"John Appleseed", @"Customer name field placeholder. Any generic name and surname specific to the language, nothing too funny though.");
     settings.emailPlaceholder = @"someone@somewhere.com";
     settings.detailsPlaceholder = FMPLocalizedString(@"Write your message here...", @"Feedback details field placeholder.");
-    
+    settings.windowTitle = @"";
     return settings;
 }
 
