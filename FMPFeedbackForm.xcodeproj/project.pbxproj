@@ -228,6 +228,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F7EA5CB299A59F30072C0DE /* Zendesk */ = {
+			isa = PBXGroup;
+			children = (
+				2FD152AC23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.h */,
+				2FD152AD23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.m */,
+			);
+			path = Zendesk;
+			sourceTree = "<group>";
+		};
 		2FA47A7723F1D010005E4467 /* AttachmentItems */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,9 +361,8 @@
 		2FD152AB23D6F0F700EE0BC2 /* FeedbackSender */ = {
 			isa = PBXGroup;
 			children = (
+				2F7EA5CB299A59F30072C0DE /* Zendesk */,
 				2FD1528023D6DE8E00EE0BC2 /* FMPFeedbackSender.h */,
-				2FD152AC23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.h */,
-				2FD152AD23D6F11700EE0BC2 /* FMPZendeskFeedbackSender.m */,
 				2FE6B52824236298005C2EC2 /* FMPValidatedParameters.h */,
 				2FE6B52924236298005C2EC2 /* FMPValidatedParameters.m */,
 				2FFBFCEF23EC3D2000B41736 /* FMPFeedbackParameter.h */,
