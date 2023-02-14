@@ -102,12 +102,20 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
                 [commentDict setObject:[NSArray arrayWithObject:uploadsToken] forKey:@"uploads"];
             }
             
+            // Custom fields
+            NSArray *customFields = @[];
+            if (self.customFields)
+            {
+                customFields = self.customFields;
+            }
+            
             // Prepare request
             NSDictionary *bodyDict = @{
                 @"request": @{
                         @"requester": [requesterDict copy],
                         @"subject": subject,
-                        @"comment": [commentDict copy]
+                        @"comment": [commentDict copy],
+                        @"custom_fields": customFields
                 }
             };
             NSError *jsonError = nil;

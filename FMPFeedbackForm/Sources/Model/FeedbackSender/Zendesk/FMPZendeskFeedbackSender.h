@@ -21,6 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
                                authToken:(NSString *)authToken
                              productName:(NSString *)productName NS_DESIGNATED_INITIALIZER;
 
+/// Custom ticket fields that you can set up from Zendesk side.
+/// More info here: https://developer.zendesk.com/documentation/ticketing/managing-tickets/creating-and-updating-tickets/#setting-custom-field-values
+@property (nonatomic, copy) NSArray<NSDictionary<NSString *, id> *> *customFields;
+
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 
