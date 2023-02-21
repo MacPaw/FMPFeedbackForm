@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "FMPFeedbackForm"
-  spec.version      = "1.2.1"
+  spec.version      = "1.2.2"
   spec.summary      = "A convenient feedback form for macOS products."
   spec.description  = <<-DESC
   FMPFeedbackForm is an Objective-C framework that lets you add a simple yet effective feedback form to your macOS project. Localized into 12 languages, ready to work with Zendesk right out of the box.
