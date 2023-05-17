@@ -21,7 +21,11 @@ let package = Package(
             name: "FMPFeedbackForm",
             path: "FMPFeedbackForm",
             exclude: ["Info.plist"],
-            resources: [.process("Resources")]
+            resources: [.process("Resources")],
+            publicHeadersPath: "include",
+            cSettings: [
+                .headerSearchPath("PrivateHeaders"),
+            ]
         )
     ]
 )
