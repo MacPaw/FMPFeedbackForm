@@ -52,6 +52,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///             and want to prefill the form for him.
 @property (nonatomic, copy) NSString *defaultEmail;
 
+/// The form's window title.
+@property (nonatomic, copy) NSString *windowTitle;
+
 @end
 
 NS_ASSUME_NONNULL_END
