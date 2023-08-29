@@ -54,6 +54,7 @@
                                                                          fileSelectionManager:fileSelectionMaganer
                                                                         systemProfileProvider:self.systemProfileProvider
                                                                                      settings:settings];
+    self.window.title = settings.windowTitle;
     mainViewController.delegate = self;
     self.contentViewController = mainViewController;
 }
