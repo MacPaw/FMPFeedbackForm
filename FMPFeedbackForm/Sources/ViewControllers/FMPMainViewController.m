@@ -273,8 +273,8 @@ static CGFloat textControlFontSize = 13.0;
     if (@available(macOS 11.0, *))
     {
         [NSLayoutConstraint activateConstraints:@[
-            [self.subjectButton.leftAnchor constraintEqualToAnchor:self.formContainer.leftAnchor constant:0.5],
-            [self.subjectButton.rightAnchor constraintEqualToAnchor:self.formContainer.rightAnchor constant:-0.5]
+            [self.subjectButton.leftAnchor constraintEqualToAnchor:self.formContainer.leftAnchor constant:1],
+            [self.subjectButton.rightAnchor constraintEqualToAnchor:self.formContainer.rightAnchor constant:-1]
         ]];
     } else
     {
@@ -436,8 +436,8 @@ static CGFloat textControlFontSize = 13.0;
     if (@available(macOS 11.0, *))
     {
         [NSLayoutConstraint activateConstraints:@[
-            [self.sendButton.bottomAnchor constraintEqualToAnchor:self.formContainer.bottomAnchor constant:-0.5],
-            [self.sendButton.rightAnchor constraintEqualToAnchor:self.formContainer.rightAnchor constant:-0.5]
+            [self.sendButton.bottomAnchor constraintEqualToAnchor:self.formContainer.bottomAnchor constant:-1],
+            [self.sendButton.rightAnchor constraintEqualToAnchor:self.formContainer.rightAnchor constant:-1]
         ]];
     } else
     {
