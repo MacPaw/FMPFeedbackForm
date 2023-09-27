@@ -19,7 +19,7 @@ recent console logs and preferences (NSUserDefaults) of your application.
 If the default look of the form doesn't quite suit your needs, you may easily customize any text, 
 field value or placeholder using a handy interface.
 
-### Localized into 12 languages
+### Localized into 11 languages
 <table>
 <tr>
 <td width="200">
