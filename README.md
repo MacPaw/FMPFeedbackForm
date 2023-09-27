@@ -37,7 +37,6 @@ field value or placeholder using a handy interface.
 <li>🇰🇷Korean</li>
 <li>🇵🇱Polish</li>
 <li>🇧🇷Portuguese</li>
-<li>🇷🇺Russian</li>
 <li>🇪🇸Spanish</li>
 <li>🇺🇦Ukrainian</li>
 </ul>
