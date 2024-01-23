@@ -154,8 +154,8 @@
         NSString *errorText;
         if (error.code == FMPErrorCodeBadInternet)
         {
-            errorTitle = FMPLocalizedString(@"Report could not be sent due to a connection problem.", @"Internet connection error title.");
-            errorText = FMPLocalizedString(@"Please check your Internet connection or Firewall settings and try again.", @"Internet connection error text.");
+            errorTitle = FMPLocalizedString(@"Connect to the internet to send feedback", @"Internet connection error title.");
+            errorText = FMPLocalizedString(@"Check your network connection or Firewall settings and try again.", @"Internet connection error text.");
         }
         else
         {

@@ -52,10 +52,10 @@
 "Write your message here..." = "Schrijf hier je bericht...";
 
 /* Internet connection error title. */
-"Report could not be sent due to a connection problem." = "Rapport kan niet worden verstuurd vanwege een verbindingsprobleem.";
+"Connect to the internet to send feedback" = "Maak verbinding met internet om feedback te versturen";
 
 /* Internet connection error text. */
-"Please check your Internet connection or Firewall settings and try again." = "Controleer de internetverbinding of Firewall-instellingen en probeer opnieuw.";
+"Check your network connection or Firewall settings and try again." = "Controleer je netwerkverbinding of Firewall-instellingen en probeer het daarna opnieuw.";
 
 /* Generic error title. */
 "An error occurred while sending report." = "Er deed zich een fout voor bij het versturen van het rapport.";

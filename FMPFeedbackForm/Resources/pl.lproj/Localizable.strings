@@ -52,10 +52,10 @@
 "Write your message here..." = "Napisz wiadomość tutaj...";
 
 /* Internet connection error title. */
-"Report could not be sent due to a connection problem." = "Wysłanie raportu nie powiodło się przez problem z połączeniem.";
+"Connect to the internet to send feedback" = "Podłącz się do internetu, by wysłać wiadomość";
 
 /* Internet connection error text. */
-"Please check your Internet connection or Firewall settings and try again." = "Sprawdż ustawienia zapory siecowej lub połączenie z Internetem i spróbuj ponownie.";
+"Check your network connection or Firewall settings and try again." = "Sprawdź połączenie lub ustawienia zapory sieciowej i ponów próbę.";
 
 /* Generic error title. */
 "An error occurred while sending report." = "Podczas wysyłania powiadomienia wystąpił błąd.";

@@ -52,10 +52,10 @@
 "Write your message here..." = "メッセージをご記入ください...";
 
 /* Internet connection error title. */
-"Report could not be sent due to a connection problem." = "接続問題のため、エラーレポートが送信できません。";
+"Connect to the internet to send feedback" = "フィードバックを送信するにはインターネットに接続してください";
 
 /* Internet connection error text. */
-"Please check your Internet connection or Firewall settings and try again." = "インターネット接続またはファイアウォール設定を確認し、もう一度お試しください。";
+"Check your network connection or Firewall settings and try again." = "ネットワーク接続またはファイアウォールの設定を確認してから、もう一度お試しください。";
 
 /* Generic error title. */
 "An error occurred while sending report." = "報告を送信中にエラーが起きました。";

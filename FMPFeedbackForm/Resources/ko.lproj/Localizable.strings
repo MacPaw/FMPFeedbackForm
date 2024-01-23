@@ -52,10 +52,10 @@
 "Write your message here..." = "여기 메시지를 작성하세요...";
 
 /* Internet connection error title. */
-"Report could not be sent due to a connection problem." = "접속 문제로 인해 리포트를 보낼 수 없습니다.";
+"Connect to the internet to send feedback" = "피드백을 보내려면 인터넷에 연결하세요";
 
 /* Internet connection error text. */
-"Please check your Internet connection or Firewall settings and try again." = "인터넷 연결 또는 방화벽 설정을 확인하신 후 다시 시도하시기 바랍니다.";
+"Check your network connection or Firewall settings and try again." = "네트워크 연결 또는 방화벽 설정을 확인한 후 다시 시도하세요.";
 
 /* Generic error title. */
 "An error occurred while sending report." = "리포트를 보내는 도중 오류가 발생했습니다.";
