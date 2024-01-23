@@ -52,10 +52,10 @@
 "Write your message here..." = "填写您的反馈";
 
 /* Internet connection error title. */
-"Report could not be sent due to a connection problem." = "由于连接问题未能发送报告";
+"Connect to the internet to send feedback" = "连接至互联网以发送反馈";
 
 /* Internet connection error text. */
-"Please check your Internet connection or Firewall settings and try again." = "请检查您的网络连接或者防火墙设置，重试";
+"Check your network connection or Firewall settings and try again." = "请检查您的网络连接或防火墙设置，然后重试。";
 
 /* Generic error title. */
 "An error occurred while sending report." = "发送报告时出错。";
