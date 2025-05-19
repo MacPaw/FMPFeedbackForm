@@ -136,9 +136,8 @@ class ViewController: NSViewController {
 
     private func validateZendeskCreds() -> Bool {
         let isSubdomainValid = subdomainField.trimmedNonEmptyString != nil
-        let isTokenValid = tokenField.trimmedNonEmptyString != nil
         let isProductNameValid = productNameField.trimmedNonEmptyString != nil
-        return isSubdomainValid && isTokenValid && isProductNameValid
+        return isSubdomainValid && isProductNameValid
     }
 }
 
