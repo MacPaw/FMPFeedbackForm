@@ -63,45 +63,8 @@ static CGFloat iconToCaptionSpacing = 2.0;
         [self.caption.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor]
     ]];
     
-    if (@available(macOS 10.14, *))
-    {
-        self.attachImage.maskColor = NSColor.controlAccentColor;
-        self.caption.textColor = NSColor.controlAccentColor;
-    }
-    else
-    {
-        [self updateColorsForOlderSystems];
-        [NSNotificationCenter.defaultCenter addObserver:self
-                                               selector:@selector(updateColorsForOlderSystems)
-                                                   name:NSControlTintDidChangeNotification
-                                                 object:nil];
-    }
-}
-
-- (void)dealloc
-{
-    if (@available(macOS 10.14, *))
-    {
-        return;
-    }
-    
-    [NSNotificationCenter.defaultCenter removeObserver:self];
-}
-
-- (void)updateColorsForOlderSystems
-{
-    NSColor *color = nil;
-    if (NSColor.currentControlTint == NSGraphiteControlTint)
-    {
-        color = [NSColor fmp_dynamicInverted50AlphaColor];
-    }
-    else
-    {
-        // Blue color
-        color = [NSColor fmp_colorWithSRGBHex:0x007AFF];
-    }
-    self.attachImage.maskColor = color;
-    self.caption.textColor = color;
+    self.attachImage.maskColor = NSColor.controlAccentColor;
+    self.caption.textColor = NSColor.controlAccentColor;
 }
 
 - (BOOL)isEnabled

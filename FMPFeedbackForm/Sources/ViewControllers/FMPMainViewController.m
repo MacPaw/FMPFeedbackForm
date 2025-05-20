@@ -270,19 +270,10 @@ static CGFloat textControlFontSize = 13.0;
     [NSLayoutConstraint activateConstraints:@[
         [self.subjectButton.topAnchor constraintEqualToAnchor:self.subtitleLabel.bottomAnchor constant:14]
     ]];
-    if (@available(macOS 11.0, *))
-    {
-        [NSLayoutConstraint activateConstraints:@[
-            [self.subjectButton.leftAnchor constraintEqualToAnchor:self.formContainer.leftAnchor constant:1],
-            [self.subjectButton.rightAnchor constraintEqualToAnchor:self.formContainer.rightAnchor constant:-1]
-        ]];
-    } else
-    {
-        [NSLayoutConstraint activateConstraints:@[
-            [self.subjectButton.leftAnchor constraintEqualToAnchor:self.formContainer.leftAnchor],
-            [self.subjectButton.rightAnchor constraintEqualToAnchor:self.formContainer.rightAnchor]
-        ]];
-    }
+    [NSLayoutConstraint activateConstraints:@[
+        [self.subjectButton.leftAnchor constraintEqualToAnchor:self.formContainer.leftAnchor constant:1],
+        [self.subjectButton.rightAnchor constraintEqualToAnchor:self.formContainer.rightAnchor constant:-1]
+    ]];
 }
 
 - (void)setupNameField
@@ -433,25 +424,16 @@ static CGFloat textControlFontSize = 13.0;
     [NSLayoutConstraint activateConstraints:@[
         [self.sendButton.topAnchor constraintEqualToAnchor:self.systemProfileCheckbox.bottomAnchor constant:15]
     ]];
-    if (@available(macOS 11.0, *))
-    {
-        [NSLayoutConstraint activateConstraints:@[
-            [self.sendButton.bottomAnchor constraintEqualToAnchor:self.formContainer.bottomAnchor constant:-1],
-            [self.sendButton.rightAnchor constraintEqualToAnchor:self.formContainer.rightAnchor constant:-1]
-        ]];
-    } else
-    {
-        [NSLayoutConstraint activateConstraints:@[
-            [self.sendButton.bottomAnchor constraintEqualToAnchor:self.formContainer.bottomAnchor],
-            [self.sendButton.rightAnchor constraintEqualToAnchor:self.formContainer.rightAnchor]
-        ]];
-    }
+    [NSLayoutConstraint activateConstraints:@[
+        [self.sendButton.bottomAnchor constraintEqualToAnchor:self.formContainer.bottomAnchor constant:-1],
+        [self.sendButton.rightAnchor constraintEqualToAnchor:self.formContainer.rightAnchor constant:-1]
+    ]];
 }
 
 - (void)setupProgressSpinner
 {
     self.progressSpinner = [NSProgressIndicator fmp_newAutoLayout];
-    self.progressSpinner.style = NSProgressIndicatorSpinningStyle;
+    self.progressSpinner.style = NSProgressIndicatorStyleSpinning;
     [self.progressSpinner startAnimation:self];
     [self.progressSpinner setHidden:YES];
     [self.formContainer addSubview:self.progressSpinner];

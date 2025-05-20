@@ -24,17 +24,10 @@ static NSString *const kEffectiveAppearanceKeyPath = @"effectiveAppearance";
 
 - (void)setup
 {
-    self.style = NSProgressIndicatorSpinningStyle;
+    self.style = NSProgressIndicatorStyleSpinning;
     
-    if (@available(macOS 10.14, *))
-    {
-        self.appearance = NSApplication.sharedApplication.effectiveAppearance;
-        [NSApplication.sharedApplication addObserver:self forKeyPath:kEffectiveAppearanceKeyPath options:NSKeyValueObservingOptionNew context:nil];
-    }
-    else
-    {
-        self.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua];
-    }
+    self.appearance = NSApplication.sharedApplication.effectiveAppearance;
+    [NSApplication.sharedApplication addObserver:self forKeyPath:kEffectiveAppearanceKeyPath options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
