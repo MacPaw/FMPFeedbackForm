@@ -6,12 +6,12 @@
 //  Copyright © 2020 MacPaw. All rights reserved.
 //
 
-@import Foundation;
-#import "FMPFeedbackParameter.h"
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^FMPSendFeedbackCompletion)(NSError *_Nullable error);
+typedef NSString *const FMPFeedbackParameter NS_EXTENSIBLE_STRING_ENUM;
 
 @protocol FMPFeedbackSender <NSObject>
 

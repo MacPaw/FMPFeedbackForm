@@ -6,8 +6,8 @@
 //  Copyright © 2020 MacPaw. All rights reserved.
 //
 
-@import Foundation;
-#import "FMPFeedbackSender.h"
+#import <Foundation/Foundation.h>
+@protocol FMPFeedbackSender;
 
 NS_ASSUME_NONNULL_BEGIN
 
