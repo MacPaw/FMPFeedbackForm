@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.screenshots  = "https://github.com/MacPaw/FMPFeedbackForm/blob/master/Screenshots/1.png?raw=true"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = "MacPaw Inc."
-  spec.platform     = :osx, "10.12"
+  spec.platform     = :osx, "11.0"
   spec.source       = { :git => "https://github.com/MacPaw/FMPFeedbackForm.git", :tag => "v#{spec.version}" }
 
   spec.source_files  = "FMPFeedbackForm/**/*.{h,m}"
