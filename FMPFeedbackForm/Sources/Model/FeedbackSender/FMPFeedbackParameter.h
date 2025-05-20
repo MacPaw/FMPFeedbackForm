@@ -6,7 +6,7 @@
 //  Copyright © 2020 MacPaw. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 typedef NSString *const FMPFeedbackParameter NS_EXTENSIBLE_STRING_ENUM;
 

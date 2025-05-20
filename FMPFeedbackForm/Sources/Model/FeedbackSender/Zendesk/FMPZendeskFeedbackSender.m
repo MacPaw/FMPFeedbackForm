@@ -6,11 +6,13 @@
 //  Copyright © 2020 MacPaw. All rights reserved.
 //
 
+#import "FMPFeedbackSender.h"
 #import "FMPZendeskFeedbackSender.h"
 #import "FMPValidatedParameters.h"
 #import "NSError+FMPExtensions.h"
 #import "NSString+FMPExtensions.h"
 #import "NSObject+FMPExtensions.h"
+#import "FMPFeedbackParameter.h"
 
 typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nullable uploadsToken);
 
