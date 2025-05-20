@@ -15,7 +15,7 @@
 typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nullable uploadsToken);
 
 @interface FMPZendeskFeedbackSender ()
-@property (nonatomic, copy) NSString *authToken;
+@property (nonatomic, copy) NSString * _Nullable authToken;
 @property (nonatomic, copy) NSString *productName;
 @property (nonatomic, copy) NSString *subdomain;
 @end
@@ -26,7 +26,7 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
 @synthesize maxAttachmentFileSize;
 
 - (instancetype)initWithZendeskSubdomain:(NSString *)subdomain
-                               authToken:(NSString *)authToken
+                               authToken:(NSString * _Nullable)authToken
                              productName:(NSString *)productName
 {
     self = [super init];
@@ -38,6 +38,15 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
         self.maxAttachmentsCount = 10;
         self.maxAttachmentFileSize = 20;
     }
+    return self;
+}
+
+- (instancetype)initWithZendeskSubdomain:(NSString *)subdomain
+                             productName:(NSString *)productName
+{
+    self = [self initWithZendeskSubdomain:subdomain
+                                authToken:nil
+                              productName:productName];
     return self;
 }
 
@@ -54,16 +63,16 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
         }
         return;
     }
-    
+
     // User info
     NSMutableDictionary *requesterDict = [NSMutableDictionary dictionaryWithDictionary:@{
         @"email": validParameters.email
     }];
-    
+
     NSString *name = [NSString fmp_dynamicCastObject:parameters[FMPFeedbackParameterName]];
     NSString *nonEmptyName = name.length > 0 ? name : @"Anonymous";
     [requesterDict setObject:nonEmptyName forKey:@"name"];
-    
+
     // Upload files if needed
     NSMutableArray<NSURL *> *filesToUpload = [NSMutableArray new];
     NSArray<NSURL *> *attachments = [NSArray fmp_dynamicCastObject:parameters[FMPFeedbackParameterAttachments]];
@@ -76,11 +85,13 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
     {
         [filesToUpload addObject:systemProfileURL];
     }
-    
+
+    NSString * _Nullable authorizationHeaderValue = [self authHeaderValueWithEmail:validParameters.email];
+
     __weak typeof(self) weakSelf = self;
     [self uploadAttachments:filesToUpload
                uploadsToken:nil
-                      email:validParameters.email
+   authorizationHeaderValue:authorizationHeaderValue
                  completion:^(NSError * _Nullable error, NSString *_Nullable uploadsToken) {
         if (error)
         {
@@ -89,10 +100,10 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
         else
         {
             __strong typeof(weakSelf) _self = weakSelf;
-            
+
             // Subject with product name
             NSString *subject = [NSString stringWithFormat:@"[%@] %@", _self.productName, validParameters.subject];
-            
+
             // Ticket comment and attachments
             NSMutableDictionary *commentDict = [NSMutableDictionary dictionaryWithDictionary:@{
                 @"body": validParameters.details
@@ -101,21 +112,21 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
             {
                 [commentDict setObject:[NSArray arrayWithObject:uploadsToken] forKey:@"uploads"];
             }
-            
+
             // Custom fields
             NSArray *customFields = @[];
             if (self.customFields)
             {
                 customFields = self.customFields;
             }
-            
+
             // Prepare request
             NSDictionary *bodyDict = @{
                 @"request": @{
-                        @"requester": [requesterDict copy],
-                        @"subject": subject,
-                        @"comment": [commentDict copy],
-                        @"custom_fields": customFields
+                    @"requester": [requesterDict copy],
+                    @"subject": subject,
+                    @"comment": [commentDict copy],
+                    @"custom_fields": customFields
                 }
             };
             NSError *jsonError = nil;
@@ -128,14 +139,17 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
                 }
                 return;
             }
-            
+
             NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@.zendesk.com/api/v2/requests.json", _self.subdomain]];
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
             [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-            [request setValue:[_self authHeaderValueWithEmail:validParameters.email] forHTTPHeaderField:@"Authorization"];
+            if (authorizationHeaderValue)
+            {
+                [request setValue:authorizationHeaderValue forHTTPHeaderField:@"Authorization"];
+            }
             [request setHTTPBody:body];
             [request setHTTPMethod:@"POST"];
-            
+
             // Send request
             NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request
                                                                          completionHandler:^(NSData * _Nullable data,
@@ -146,8 +160,8 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
             [task resume];
         }
     }];
-    
-    
+
+
 }
 
 // MARK: - Upload attachments
@@ -155,7 +169,7 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
 // Recursively uploads every file in the `attachments` array, completes with an error if an upload fails
 - (void)uploadAttachments:(NSArray<NSURL *> *)attachments
              uploadsToken:(NSString *)uploadsToken
-                    email:(NSString *)email
+ authorizationHeaderValue:(NSString * _Nullable)authorizationHeaderValue
                completion:(FMPUploadFilesCompletion)completion
 {
     if (attachments.count == 0)
@@ -166,7 +180,7 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
         }
         return;
     }
-    
+
     NSError *readFileError = nil;
     NSURL *fileURL = [attachments firstObject];
     NSData *fileData = [NSData dataWithContentsOfURL:fileURL options:0 error:&readFileError];
@@ -178,22 +192,25 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
         }
         return;
     }
-    
+
     // Form a URL with file name and previous uploads token
     NSString *tokenString = uploadsToken ? [NSString stringWithFormat:@"&token=%@", uploadsToken] : @"";
     NSString *fileNameString = [fileURL.lastPathComponent
                                 stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
     NSString *urlString = [NSString stringWithFormat:@"https://%@.zendesk.com/api/v2/uploads.json?filename=%@%@",
                            self.subdomain, fileNameString, tokenString];
-    
+
     // Prepare request
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setValue:@"application/binary" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:[self authHeaderValueWithEmail:email] forHTTPHeaderField:@"Authorization"];
+    if (authorizationHeaderValue)
+    {
+        [request setValue:authorizationHeaderValue forHTTPHeaderField:@"Authorization"];
+    }
     [request setHTTPBody:fileData];
     [request setHTTPMethod:@"POST"];
-    
+
     // Send request
     __weak typeof(self) weakSelf = self;
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request
@@ -210,7 +227,7 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
             }
             return;
         }
-        
+
         NSString *newUploadsToken = nil;
         if (!uploadsToken)
         {
@@ -222,18 +239,26 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
         {
             newUploadsToken = uploadsToken;
         }
-        
+
         NSMutableArray *mutableAttachments = [attachments mutableCopy];
         [mutableAttachments removeObject:fileURL];
-        [_self uploadAttachments:[mutableAttachments copy] uploadsToken:newUploadsToken email:email completion:completion];
+        [_self uploadAttachments:[mutableAttachments copy]
+                    uploadsToken:newUploadsToken
+        authorizationHeaderValue:authorizationHeaderValue
+                      completion:completion];
     }];
     [task resume];
 }
 
 // MARK: - Helper methods
 
-- (NSString *)authHeaderValueWithEmail:(NSString *)email
+- (NSString * _Nullable)authHeaderValueWithEmail:(NSString *)email
 {
+    if (!self.authToken || self.authToken.length == 0)
+    {
+        return nil;
+    }
+
     NSString *authStr = [NSString stringWithFormat:@"%@/token:%@", email, self.authToken];
     NSData *authData = [authStr dataUsingEncoding:NSASCIIStringEncoding];
     NSString *authStrData = [[NSString alloc]
@@ -258,14 +283,14 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
             return [NSError fmp_errorWithCode:FMPErrorCodeFailedSendRequest description:[NSString stringWithFormat:@"Failed to send request with error:%@", error]];
         }
     }
-    
+
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
     if (httpResponse.statusCode / 100 != 2)
     {
         return [NSError fmp_errorWithCode:FMPErrorCodeBadResponse description:
                 [NSString stringWithFormat:@"Bad response returned by request: %@. Response: %@", request, response]];
     }
-    
+
     return nil;
 }
 
@@ -283,7 +308,7 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
         *errorPtr = [NSError fmp_errorWithCode:FMPErrorCodeInvalidEmail description:@"Email string is invalid."];
         return nil;
     }
-    
+
     NSString *subject = [NSString fmp_dynamicCastObject:parameters[FMPFeedbackParameterSubject]];
     if (!subject)
     {
@@ -295,7 +320,7 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
         *errorPtr = [NSError fmp_errorWithCode:FMPErrorCodeInvalidSubject description:@"Subject string should not be empty."];
         return nil;
     }
-    
+
     NSString *details = [NSString fmp_dynamicCastObject:parameters[FMPFeedbackParameterDetails]];
     if (!details)
     {
@@ -307,7 +332,7 @@ typedef void (^FMPUploadFilesCompletion)(NSError *_Nullable error, NSString *_Nu
         *errorPtr = [NSError fmp_errorWithCode:FMPErrorCodeInvalidDetails description:@"Details string should not be empty."];
         return nil;
     }
-    
+
     return [[FMPValidatedParameters alloc] initWithEmail:email subject:subject details:details];
 }
 
