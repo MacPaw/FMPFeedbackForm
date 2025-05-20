@@ -68,14 +68,7 @@
 
 + (instancetype)fmp_colorNamed:(NSString *)colorName fallbackColor:(NSColor *)fallbackColor;
 {
-    if (@available(macOS 10.13, *))
-    {
-        return [NSColor colorNamed:colorName bundle:FMPBundleHelper.currentBundle];
-    }
-    else
-    {
-        return fallbackColor;
-    }
+    return [NSColor colorNamed:colorName bundle:FMPBundleHelper.currentBundle];
 }
 
 @end
