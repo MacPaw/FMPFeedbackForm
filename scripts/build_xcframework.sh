@@ -37,19 +37,25 @@ xcodebuild archive \
     -project "${PROJECT_DIR}/${FRAMEWORK_NAME}.xcodeproj" | \
     xcbeautify
 
+FRAMEWORK_PATH="$(readlink -f "${MACOS_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework")"
+DSYMS_PATH="$(readlink -f "${MACOS_ARCHIVE_PATH}/dSYMs/${FRAMEWORK_NAME}.framework.dSYM")"
+
 # Create XCFramework
 echo "📦 Creating XCFramework..."
 xcodebuild -create-xcframework \
-    -framework "${MACOS_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework" \
+    -framework "${FRAMEWORK_PATH}" \
+    -debug-symbols "${DSYMS_PATH}" \
     -output "${XCFRAMEWORK_DIR}/${FRAMEWORK_NAME}.xcframework"
 
 echo "✅ XCFramework successfully created at: ${XCFRAMEWORK_DIR}/${FRAMEWORK_NAME}.xcframework"
-echo "Total size: $(du -sh "${XCFRAMEWORK_DIR}/${FRAMEWORK_NAME}.xcframework" | cut -f1)"
+echo "xcframework size: $(du -sh "${XCFRAMEWORK_DIR}/${FRAMEWORK_NAME}.xcframework" | cut -f1)"
 
 # Optionally create a zip file for distribution
 ZIP_PATH="${BUILD_DIR}/${FRAMEWORK_NAME}.xcframework.zip"
 echo "📎 Creating zip archive at: ${ZIP_PATH}"
 ditto -c -k --sequesterRsrc --keepParent --sequesterRsrc \
     "${XCFRAMEWORK_DIR}/${FRAMEWORK_NAME}.xcframework" "${ZIP_PATH}"
+
+echo "zip size: $(du -sh "${ZIP_PATH}" | cut -f1)"
 
 echo "🎉 All done!"
