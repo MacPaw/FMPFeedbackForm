@@ -1,5 +1,7 @@
 # FMPFeedbackForm
 
+![FMPFeedbackForm](.github/header.png)
+
 FMPFeedbackForm is an Objective-C framework that lets you add a simple yet effective feedback form to your macOS project.
 
 ![FMPFeedbackForm](https://github.com/MacPaw/FMPFeedbackForm/blob/master/Screenshots/1.png?raw=true)
