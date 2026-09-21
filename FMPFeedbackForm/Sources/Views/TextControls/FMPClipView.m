@@ -3,7 +3,7 @@
 //  FMPFeedbackForm
 //
 //  Created by Anton Barkov on 01.04.2020.
-//  Copyright © 2020 MacPaw. All rights reserved.
+//  Copyright © 2020 MacPaw Way Ltd. All rights reserved.
 //
 
 #import "FMPClipView.h"

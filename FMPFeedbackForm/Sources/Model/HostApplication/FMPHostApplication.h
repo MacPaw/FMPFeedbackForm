@@ -3,7 +3,7 @@
 //  FMPFeedbackForm
 //
 //  Created by Anton Barkov on 04.03.2020.
-//  Copyright © 2020 MacPaw. All rights reserved.
+//  Copyright © 2020 MacPaw Way Ltd. All rights reserved.
 //
 
 @import Foundation;
