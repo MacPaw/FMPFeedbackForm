@@ -3,7 +3,7 @@
 //  FMPFeedbackFormTests
 //
 //  Created by Serhii Butenko on 26.03.2021.
-//  Copyright © 2021 MacPaw. All rights reserved.
+//  Copyright © 2021 MacPaw Way Ltd. All rights reserved.
 //
 
 @import XCTest;
