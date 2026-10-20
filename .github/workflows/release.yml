@@ -1,0 +1,74 @@
+name: Release
+
+# Run by a maintainer from the Actions tab. Builds both xcframework zips and opens a
+# draft release with them; publishing the draft creates the tag.
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version, must match MARKETING_VERSION (e.g. 1.3.1)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: macos-15
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      VERSION: ${{ inputs.version }}
+      GH_TOKEN: ${{ github.token }}
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+      # Xcode 16 still builds for the macOS 11 deployment target; Xcode 27 requires 12.0.
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check branch and version
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/$DEFAULT_BRANCH" ]; then
+            echo "::error::Releases are built from $DEFAULT_BRANCH only, not $GITHUB_REF"
+            exit 1
+          fi
+          project_version=$(xcodebuild -project FMPFeedbackForm.xcodeproj -target FMPFeedbackForm -showBuildSettings \
+            | awk -F' = ' '/ MARKETING_VERSION /{print $2}')
+          if [ "${VERSION#v}" != "$project_version" ]; then
+            echo "::error::Input version $VERSION does not match MARKETING_VERSION $project_version"
+            exit 1
+          fi
+          if gh release view "$VERSION" >/dev/null 2>&1; then
+            echo "::error::Release $VERSION already exists"
+            exit 1
+          fi
+
+      - name: Install xcbeautify
+        run: command -v xcbeautify || brew install xcbeautify
+
+      - name: Build xcframeworks
+        run: |
+          xcodebuild -version
+          scripts/build_xcframework.sh
+
+      - name: Create draft release
+        run: |
+          {
+            echo "## Swift Package Manager checksums"
+            echo
+            for zip in build/*.xcframework.zip; do
+              echo "- \`$(basename "$zip")\`: \`$(swift package compute-checksum "$zip")\`"
+            done
+          } > checksums.md
+          gh release create "$VERSION" build/*.xcframework.zip \
+            --draft \
+            --target "$GITHUB_SHA" \
+            --title "$VERSION" \
+            --generate-notes \
+            --notes-file checksums.md
