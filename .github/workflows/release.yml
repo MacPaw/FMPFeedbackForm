@@ -1,0 +1,99 @@
+name: Release
+
+# Run by a maintainer from the Actions tab. Builds both xcframework zips and opens a
+# draft release with them; publishing the draft creates the tag.
+# A dry run (the default) only builds: the zips are attached to the workflow run instead.
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version, must match MARKETING_VERSION (e.g. 1.3.1). Optional for a dry run"
+        required: false
+        type: string
+      dry_run:
+        description: "Dry run: build and attach the zips to this run, create no release"
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: macos-15
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      VERSION: ${{ inputs.version }}
+      DRY_RUN: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run }}
+      GH_TOKEN: ${{ github.token }}
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+      # Xcode 16 still builds for the macOS 11 deployment target; Xcode 27 requires 12.0.
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check branch and version
+        run: |
+          project_version=$(xcodebuild -project FMPFeedbackForm.xcodeproj -target FMPFeedbackForm -showBuildSettings \
+            | awk -F' = ' '/ MARKETING_VERSION /{print $2}')
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "VERSION=${VERSION:-$project_version}" >> "$GITHUB_ENV"
+            echo "Dry run of ${VERSION:-$project_version} from $GITHUB_REF: no release will be created"
+            exit 0
+          fi
+          if [ "$GITHUB_REF" != "refs/heads/$DEFAULT_BRANCH" ]; then
+            echo "::error::Releases are built from $DEFAULT_BRANCH only, not $GITHUB_REF"
+            exit 1
+          fi
+          if [ "${VERSION#v}" != "$project_version" ]; then
+            echo "::error::Input version '$VERSION' does not match MARKETING_VERSION $project_version"
+            exit 1
+          fi
+          if gh release view "$VERSION" >/dev/null 2>&1; then
+            echo "::error::Release $VERSION already exists"
+            exit 1
+          fi
+
+      - name: Install xcbeautify
+        run: command -v xcbeautify || brew install xcbeautify
+
+      - name: Build xcframeworks
+        run: |
+          xcodebuild -version
+          scripts/build_xcframework.sh
+
+      - name: Write checksums
+        run: |
+          {
+            echo "## Swift Package Manager checksums"
+            echo
+            for zip in build/*.xcframework.zip; do
+              echo "- \`$(basename "$zip")\`: \`$(swift package compute-checksum "$zip")\`"
+            done
+          } > checksums.md
+          cat checksums.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Attach zips to the run
+        if: env.DRY_RUN == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: FMPFeedbackForm-${{ env.VERSION }}-xcframeworks
+          path: build/*.xcframework.zip
+          if-no-files-found: error
+
+      - name: Create draft release
+        if: env.DRY_RUN != 'true'
+        run: |
+          gh release create "$VERSION" build/*.xcframework.zip \
+            --draft \
+            --target "$GITHUB_SHA" \
+            --title "$VERSION" \
+            --generate-notes \
+            --notes-file checksums.md
