@@ -10,7 +10,7 @@
 "Incorrect email" = "Невірний email";
 
 /* System profile checkbox title. */
-"Send anonymous system profile" = "Надіслати анонімний профіль системи";
+"Include system profile" = "Додати профіль системи";
 
 /* Send feedback button caption. */
 "Send Feedback" = "Надіслати відгук";

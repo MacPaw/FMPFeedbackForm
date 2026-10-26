@@ -10,7 +10,7 @@
 "Incorrect email" = "E-mail incorreto";
 
 /* System profile checkbox title. */
-"Send anonymous system profile" = "Enviar perfil anônimo do sistema";
+"Include system profile" = "Incluir perfil do sistema";
 
 /* Send feedback button caption. */
 "Send Feedback" = "Enviar Comentários";

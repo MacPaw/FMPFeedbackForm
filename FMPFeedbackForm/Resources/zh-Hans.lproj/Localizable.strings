@@ -10,7 +10,7 @@
 "Incorrect email" = "错误的电子邮箱";
 
 /* System profile checkbox title. */
-"Send anonymous system profile" = "发送匿名系统配置文件";
+"Include system profile" = "包含系统配置文件";
 
 /* Send feedback button caption. */
 "Send Feedback" = "发送反馈";
