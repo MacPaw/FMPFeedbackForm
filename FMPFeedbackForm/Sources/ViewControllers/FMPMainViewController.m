@@ -378,7 +378,7 @@ static CGFloat textControlFontSize = 13.0;
     self.systemProfileCheckbox = [NSButton fmp_newAutoLayout];
     self.systemProfileCheckbox.buttonType = NSButtonTypeSwitch;
     NSAttributedString *title = [[NSAttributedString alloc]
-                                 initWithString:FMPLocalizedString(@"Send anonymous system profile",
+                                 initWithString:FMPLocalizedString(@"Include system profile",
                                                                    @"System profile checkbox title.")
                                  attributes:@{ NSForegroundColorAttributeName: NSColor.fmp_dynamicInvertedColor }];
     self.systemProfileCheckbox.attributedTitle = title;

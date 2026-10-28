@@ -10,7 +10,7 @@
 "Incorrect email" = "不正なEメール";
 
 /* System profile checkbox title. */
-"Send anonymous system profile" = "匿名のシステムプロファイルを送信する";
+"Include system profile" = "システムプロファイルを含める";
 
 /* Send feedback button caption. */
 "Send Feedback" = "フィードバックを送信";

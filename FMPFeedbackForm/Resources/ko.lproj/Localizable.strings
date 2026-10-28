@@ -10,7 +10,7 @@
 "Incorrect email" = "유효하지 않은 이메일";
 
 /* System profile checkbox title. */
-"Send anonymous system profile" = "익명으로 시스템 프로필 보내기";
+"Include system profile" = "시스템 프로필 포함";
 
 /* Send feedback button caption. */
 "Send Feedback" = "피드백 전송";

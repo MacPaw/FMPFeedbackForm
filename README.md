@@ -13,8 +13,8 @@ If you work with Zendesk you'll get the form up and running with only 10-ish lin
 send feedback to any other service by providing your own implementation of a certain data sender object without much hassle.
 
 ### System profile report
-The form's UI includes a checkbox which allows the user to attach a text file to his support request 
-which contains anonymous information about the user's machine. This report includes a list of software and hardware specs,
+The form's UI includes a checkbox which allows the user to attach a text file to their support request 
+which contains information about the user's machine. This report includes a list of software and hardware specs,
 recent console logs and preferences (NSUserDefaults) of your application.
 
 ### Customizable UI
